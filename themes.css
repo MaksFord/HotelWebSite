@@ -1,0 +1,11 @@
+:root {
+    --primary: #8b0000 ;
+    --secondary: #bcbcbc ;
+    --accent: #ffffff ;
+    --background: #f5f5f5 ;
+    --gold: #ffd700;
+}
+.header {
+    background-color: var(--primary);
+    color: var(--gold);}
+    
