@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="Styles.css" />
-    <link rel="stylesheet" href="themes.css" />
+    <link rel="stylesheet" href="colorThemes.css" />
     <script src="script.js" defer></script>
     <title>Hotel_Celinnaya</title>
   </head>
@@ -21,19 +21,20 @@
       </div>
       <div id="headerInfo">
         <i lang="ru"
-          >Республика Казахстан<br />г. Костанай, ул. Батурсынова, 95<br />+7
-          (707) 634 34 24<br />
-          +7 (7142) 54 43 66</i
+          >Республика Казахстан<br />г. Костанай, ул. Батурсынова, 95<br /><a href="tel:+77076343424"
+            ><span class="emoji">&#128222;</span>+7 (707) 634 34 24</a
+          ><br />
+          <a href="tel:+77142544366"><span class="emoji">&#128222;</span>+7 (7142) 54 43 66</a></i
         >
         <i lang="en"
-          >The Republic of Kazakhstan<br />Baytursynov Street 95, Kostanay<br />+7
+          >The Republic of Kazakhstan<br />Baytursynov Street 95, Kostanay<br /><span class="emoji">&#128222;</span>+7
           (707) 634 34 24<br />
-          +7 (7142) 54 43 66</i
+          <span class="emoji">&#128222;</span>+7 (7142) 54 43 66</i
         >
         <i lang="kz"
-          >Қазақстан Республикасы<br />Қостанай қ., Байтұрсынұлы к-сі, 95<br />+7
-          (707) 634 34 24<br />
-          +7 (7142) 54 43 66</i
+          >Қазақстан Республикасы<br />Қостанай, Байтұрсынұлы к-сі, 95<br /><span class="emoji">&#128222;</span>+7 (707)
+          634 34 24<br />
+          <span class="emoji">&#128222;</span>+7 (7142) 54 43 66</i
         >
       </div>
       <div id="socials_Lang">
@@ -51,20 +52,14 @@
             <img src="SitePics/vk.svg" alt="vk" />
           </button>
           <button class="buttonSocial" id="ok">
-            <img src="SitePics/ok-ru.svg" width="40px" alt="ok" />
+            <img src="SitePics/ok-ru.svg" alt="ok" />
           </button>
         </div>
-        <div>divider</div>
+        <div class="divider"></div>
         <div id="language">
-          <button id="ruLang" class="buttonLang">
-            Ру<img src="SitePics/ru.svg" alt="ru" />
-          </button>
-          <button id="enLang" class="buttonLang">
-            En<img src="sitePics/gb.svg" alt="en" />
-          </button>
-          <button id="kzLang" class="buttonLang">
-            Қз<img src="sitePics/kz.svg" alt="kz" />
-          </button>
+          <button id="ruLang" class="buttonLang" lang="ru"><img src="SitePics/ru.svg" alt="ru" /></button>
+          <button id="enLang" class="buttonLang" lang="en"><img src="sitePics/gb.svg" alt="en" /></button>
+          <button id="kzLang" class="buttonLang" lang="kz"><img src="sitePics/kz.svg" alt="kz" /></button>
         </div>
       </div>
     </nav>
@@ -86,19 +81,9 @@
           <i lang="kz">Бөлмелер</i>
         </div>
         <div class="navMenu" id="conference">
-          <i lang="ru">Конференц-зал</i>
-          <i lang="en">Conference Room</i>
-          <i lang="kz">Конференц-зал</i>
-        </div>
-        <div class="navMenu" id="restaraunt">
-          <i lang="ru">Ресторан</i>
-          <i lang="en">Restaraunt</i>
-          <i lang="kz">Мейрамхана</i>
-        </div>
-        <div class="navMenu" id="contacts">
-          <i lang="ru">Контакты</i>
-          <i lang="en">Contacts</i>
-          <i lang="kz">Байланыстар</i>
+          <i lang="ru">Услуги</i>
+          <i lang="en">Services</i>
+          <i lang="kz">Қызметтер</i>
         </div>
         <div class="navMenu" id="vacancies">
           <i lang="ru">Вакансии</i>
@@ -106,8 +91,8 @@
           <i lang="kz">Бос жұмыс орындары</i>
         </div>
         <div class="navMenu" id="about">
-          <i lang="ru">О нас</i>
-          <i lang="en">About Us</i>
+          <i lang="ru">Как добраться</i>
+          <i lang="en">Find Us</i>
           <i lang="kz">Біз туралы</i>
         </div>
       </div>
@@ -120,65 +105,47 @@
       </div>
       <div class="articleText">
         <i lang="ru"
-          >Добро пожаловать в гостиницу «Целинная» — ваш дом вдали от дома в
-          самом сердце г. Костаная. Мы находимся в деловом и культурном центре
-          города на пересечении улиц Байтурсынова и Пушкина, всего в 20 минутах
-          езды от аэропорта и в 10 минутах езды от железнодорожного вокзала, что
-          делает нас идеальным местом как для тех, кто останавливается в
-          Костанае в деловых целях, так и для тех, кто приехал отдохнуть. Мы
-          предлагаем более 130 уютных и комфортабельных номеров различных
-          категорий, оборудованных всем необходимым для вашего комфорта и
-          удобства. Независимо от того, путешествуете ли Вы в одиночку, семьей
-          или туристической группой, в гостинице «Целинная» всегда найдется
-          идеальный номер для Вас. В нашей гостинице также доступен спектр
-          дополнительных услуг: ресторан и кафетерий, конференц-зал, охраняемая
-          бесплатная парковка, прачечная, салон красоты, парикмахерская,
-          стоматологический кабинет. Наши сотрудники всегда готовы помочь вам и
-          ответить на любые вопросы, связанные с бизнесом, туристическими
-          маршрутами или местами отдыха в Костанае. Мы принимаем оплату за
-          проживание как наличными, так и безналичным расчетом. Кроме того, мы
-          предлагаем номера эконом-класса для тех, кто хочет сэкономить на
-          проживании. Мы уверены, что ваше пребывание в гостинице «Целинная»
-          станет приятным и запоминающимся опытом и гарантируем, что ваше
-          пребывание в нашей гостинице будет не только комфортным, но и
-          приятным. Насладитесь домашней атмосферой и уютом в нашей гостинице.
+          >Добро пожаловать в гостиницу «Целинная» — ваш дом вдали от дома в самом сердце г. Костаная. <br />
+          Мы находимся в деловом и культурном центре города на пересечении улиц Байтурсынова и Пушкина, всего в 20
+          минутах езды от аэропорта и в 10 минутах езды от железнодорожного вокзала, что делает нас идеальным местом как
+          для тех, кто останавливается в Костанае в деловых целях, так и для тех, кто приехал отдохнуть. <br />
+          Мы предлагаем более 130 уютных и комфортабельных номеров различных категорий, оборудованных всем необходимым
+          для вашего комфорта и удобства. Независимо от того, путешествуете ли Вы в одиночку, семьей или туристической
+          группой, в гостинице «Целинная» всегда найдется идеальный номер для Вас.
+          <br />В нашей гостинице также доступен спектр дополнительных услуг: ресторан и кафетерий, конференц-зал,
+          охраняемая бесплатная парковка, прачечная, салон красоты, парикмахерская, стоматологический кабинет.
+          <br />Наши сотрудники всегда готовы помочь вам и ответить на любые вопросы, связанные с бизнесом,
+          туристическими маршрутами или местами отдыха в Костанае. Мы принимаем оплату за проживание как наличными, так
+          и безналичным расчетом. Кроме того, мы предлагаем номера эконом-класса для тех, кто хочет сэкономить на
+          проживании. <br />
+          Мы уверены, что ваше пребывание в гостинице «Целинная» станет приятным и запоминающимся опытом и гарантируем,
+          что ваше пребывание в нашей гостинице будет не только комфортным, но и приятным. Насладитесь домашней
+          атмосферой и уютом в нашей гостинице.
         </i>
         <i lang="en"
-          >Welcome to "Tselinnaya" Hotel - your home away from home in the heart
-          of Kostanay city. We are located in the business and cultural center
-          of the city at the intersection of Baytursynov and Pushkin streets,
-          just 20 minutes' drive from the airport and 10 minutes' drive from the
-          railway station, making us the perfect place for both business and
-          leisure travelers. We offer over 130 cozy and comfortable rooms of
-          various categories, equipped with everything necessary for your
-          comfort and convenience. Whether you're traveling alone, with family,
-          or as part of a tourist group, "Tselinny" Hotel has the perfect room
-          for you. Our hotel also offers a range of additional services: a
-          restaurant and cafeteria, a conference room, a secure free parking
-          lot, a laundry service, a beauty salon, a hairdresser, and a dental
-          office. Our staff is always ready to help you and answer any questions
-          related to business, tourist routes, or places to relax in Kostanay.
-          We accept payment for accommodation both in cash and by credit card.
-          In addition, we offer economy-class rooms for those who want to save
-          on accommodation. We are confident that your stay at "Tselinny" Hotel
-          will be a pleasant and memorable experience, and we guarantee that
-          your stay with us will not only be comfortable but also enjoyable.
+          >Welcome to "Tselinnaya" Hotel - your home away from home in the heart of Kostanay city. We are located in the
+          business and cultural center of the city at the intersection of Baytursynov and Pushkin streets, just 20
+          minutes' drive from the airport and 10 minutes' drive from the railway station, making us the perfect place
+          for both business and leisure travelers. We offer over 130 cozy and comfortable rooms of various categories,
+          equipped with everything necessary for your comfort and convenience. Whether you're traveling alone, with
+          family, or as part of a tourist group, "Tselinny" Hotel has the perfect room for you. Our hotel also offers a
+          range of additional services: a restaurant and cafeteria, a conference room, a secure free parking lot, a
+          laundry service, a beauty salon, a hairdresser, and a dental office. Our staff is always ready to help you and
+          answer any questions related to business, tourist routes, or places to relax in Kostanay. We accept payment
+          for accommodation both in cash and by credit card. In addition, we offer economy-class rooms for those who
+          want to save on accommodation. We are confident that your stay at "Tselinny" Hotel will be a pleasant and
+          memorable experience, and we guarantee that your stay with us will not only be comfortable but also enjoyable.
           Enjoy the homely atmosphere and comfort of our hotel.</i
         >
         <i lang="kz"
-          >Целинная» қонақ үйіне қош келдіңіз - Костанай қаласының
-          жүрегіндеңіздің үйі. Біз қаланың бизнес және күнәлім центрінде
-          Байтұрсынов мен Пушкин көшелерінің өрісінде орналасқанмыз. Әуежайна 20
-          минуттан, желі жүгірушілерге арналған қоғамдық бөлімнен 10 минуттан
-          кейін қолайлы жетуге болатын мекен-жай етіп, біз деловық және демалыс
-          саяхатшыларға жақсы таңдау болып табыс береміз. «Целинная» қонақ
-          үйінде сізге қонақтардың барлық категорияларына қатысты 130-дан астам
-          өзіндік және жай қонақтар ұсынылады, оның ішінде әрі жаңа
-          мүмкіндіктерге қол жетімді бар. Сіз тек өзіңіз болсаңыз, отбасыңызбен
-          немесе туристік тобыңызбен жүріс жасасаңыз, «Целинная» қонақ үйінде
-          сіз үшін ідеалды бөлме табылады. Біздің қонақ үйімізде ресторан және
-          кафетерия, конференция залы, қорғалған тегін паркинг, прачечная, сауық
-          салоны, жүзімдік орындары мен дәрігерлер бар.</i
+          >Целинная» қонақ үйіне қош келдіңіз - Костанай қаласының жүрегіндеңіздің үйі. Біз қаланың бизнес және күнәлім
+          центрінде Байтұрсынов мен Пушкин көшелерінің өрісінде орналасқанмыз. Әуежайна 20 минуттан, желі жүгірушілерге
+          арналған қоғамдық бөлімнен 10 минуттан кейін қолайлы жетуге болатын мекен-жай етіп, біз деловық және демалыс
+          саяхатшыларға жақсы таңдау болып табыс береміз. «Целинная» қонақ үйінде сізге қонақтардың барлық
+          категорияларына қатысты 130-дан астам өзіндік және жай қонақтар ұсынылады, оның ішінде әрі жаңа мүмкіндіктерге
+          қол жетімді бар. Сіз тек өзіңіз болсаңыз, отбасыңызбен немесе туристік тобыңызбен жүріс жасасаңыз, «Целинная»
+          қонақ үйінде сіз үшін ідеалды бөлме табылады. Біздің қонақ үйімізде ресторан және кафетерия, конференция залы,
+          қорғалған тегін паркинг, прачечная, сауық салоны, жүзімдік орындары мен дәрігерлер бар.</i
         >
       </div>
       <div class="advantages">
