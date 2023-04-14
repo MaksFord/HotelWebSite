@@ -10,11 +10,14 @@ const kzText = document.getElementById("kzLang");
 kzText.addEventListener("click", () => selectLanguage("kz"));
 
 function selectLanguage(language) {
-  const wrongLang = document.querySelectorAll(`i[lang]:not(i[lang="${language}"])`);
+  const wrongLang = document.querySelectorAll(
+    `i[lang]:not(i[lang="${language}"]),p[lang]:not(p[lang="${language}"]), h3[lang]:not(h3[lang="${language}"])`
+  );
   wrongLang.forEach((element) => element.classList.add("hidden"));
   const wrongLangButton = document.querySelectorAll(`button[lang]:not(i[lang="${language}"])`);
   wrongLangButton.forEach((element) => element.classList.add("colorless"));
-  const rightLang = document.querySelectorAll(`i[lang="${language}"]`);
+
+  const rightLang = document.querySelectorAll(`i[lang="${language}"],p[lang="${language}"],h3[lang="${language}"]`);
   rightLang.forEach((element) => element.classList.remove("hidden"));
   const rightLangButton = document.querySelectorAll(`button[lang="${language}"]`);
   rightLangButton.forEach((element) => element.classList.remove("colorless"));
@@ -47,4 +50,29 @@ const ok = document.getElementById("ok");
 ok.addEventListener("click", () => {
   window.open("https://ok.ru/", "_blank");
   ok.classList.add("clicked");
+});
+
+const main = document.getElementById("main");
+main.addEventListener("click", () => {
+  window.open("index.html", "_self");
+});
+
+const rooms = document.getElementById("rooms");
+rooms.addEventListener("click", () => {
+  window.open("rooms.html", "_self");
+});
+
+const service = document.getElementById("service");
+service.addEventListener("click", () => {
+  window.open("service.html", "_self");
+});
+
+const vacancies = document.getElementById("vacancies");
+vacancies.addEventListener("click", () => {
+  window.open("vacs.html", "_self");
+});
+
+const about = document.getElementById("about");
+about.addEventListener("click", () => {
+  window.open("waypoint.html", "_self");
 });

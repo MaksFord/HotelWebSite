@@ -9,6 +9,9 @@
   background-color: var(--primary);
   color: var(--gold);
 }
+#headerInfo {
+  background-color: ;
+}
 a {
   color: var(--gold);
 }
@@ -28,8 +31,13 @@ a {
   border: solid var(--gold);
 }
 button {
-  background-color: #4b0082;
+  background-color: #620202;
 }
 html {
   background-color: var(--background);
+}
+#advantages > li {
+  background-color: var(--primary);
+  color: var(--gold);
+  border: solid var(--gold);
 }

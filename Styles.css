@@ -19,7 +19,6 @@ body {
   align-items: center;
 }
 .header > * {
-  border: 1px solid red;
   align-items: center;
   justify-content: center;
 }
@@ -49,13 +48,23 @@ a {
 }
 .buttonSocial {
   width: 3rem;
+  border-radius: 0.5rem;
+  padding: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .divider {
   height: 1.5rem;
 }
 .buttonLang {
   width: 3rem;
+  border-radius: 0.5rem;
   font-size: 1rem;
+  padding: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #language {
   display: flex;
@@ -132,6 +141,7 @@ button:active,
 }
 #navMenuContainer {
   display: flex;
+  flex-wrap: wrap;
   margin: 1rem 10%;
   border-radius: 30%;
 }
@@ -148,10 +158,21 @@ button:active,
 article {
   margin: 0 10%;
 }
-.articleTitle {
+h3 {
   text-align: center;
   font-size: 1.5rem;
 }
-.articleText {
-  text-indent: 2rem;
+p {
+  font-size: 1rem;
+}
+
+#advantages {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.2rem;
+  justify-content: space-evenly;
+}
+#advantages > li {
+  width: 300px;
+  list-style: none;
 }
