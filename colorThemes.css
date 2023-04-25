@@ -23,12 +23,15 @@ a {
 #bookRoomContainer {
   background-color: var(--primary);
   color: var(--gold);
-  border: 2px solid var(--gold);
+  border-color: var(--gold);
+}
+#navMenuContainer {
+  border-color: var(--gold);
 }
 .navMenu {
   background-color: var(--primary);
   color: var(--gold);
-  border: solid var(--gold);
+  border-color: var(--gold);
 }
 button {
   background-color: #620202;
@@ -36,8 +39,16 @@ button {
 html {
   background-color: var(--background);
 }
+article {
+  background-color: var(--background);
+}
 #advantages > li {
   background-color: var(--primary);
   color: var(--gold);
   border: solid var(--gold);
+}
+
+.footer {
+  background-color: var(--primary);
+  color: var(--gold);
 }

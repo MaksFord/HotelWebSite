@@ -1,0 +1,32 @@
+article {
+  margin: 0 15%;
+  display: flex;
+  flex-direction: column;
+}
+h3 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+p {
+  font-size: 1rem;
+}
+
+.articlePhoto {
+  align-self: center;
+  width: 60%;
+  border: 5px solid;
+}
+.articlePhoto picture {
+  max-width: 100%;
+  height: auto;
+}
+#advantages {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.2rem;
+  justify-content: space-evenly;
+}
+#advantages > li {
+  width: 300px;
+  list-style: none;
+}

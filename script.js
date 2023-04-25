@@ -52,27 +52,39 @@ ok.addEventListener("click", () => {
   ok.classList.add("clicked");
 });
 
-const main = document.getElementById("main");
-main.addEventListener("click", () => {
-  window.open("index.html", "_self");
-});
+/* SITE PAGES LINKS */
 
-const rooms = document.getElementById("rooms");
-rooms.addEventListener("click", () => {
-  window.open("rooms.html", "_self");
-});
+const main = document.querySelectorAll(".main");
+main.forEach((element) =>
+  element.addEventListener("click", () => {
+    window.open("index.html", "_self");
+  })
+);
 
-const service = document.getElementById("service");
-service.addEventListener("click", () => {
-  window.open("service.html", "_self");
-});
+const rooms = document.querySelectorAll(".rooms");
+rooms.forEach((element) =>
+  element.addEventListener("click", () => {
+    window.open("rooms.html", "_self");
+  })
+);
 
-const vacancies = document.getElementById("vacancies");
-vacancies.addEventListener("click", () => {
-  window.open("vacs.html", "_self");
-});
+const service = document.querySelectorAll(".service");
+service.forEach((element) =>
+  element.addEventListener("click", () => {
+    window.open("service.html", "_self");
+  })
+);
 
-const about = document.getElementById("about");
-about.addEventListener("click", () => {
-  window.open("waypoint.html", "_self");
-});
+const vacancies = document.querySelectorAll(".vacancies");
+vacancies.forEach((element) =>
+  element.addEventListener("click", () => {
+    window.open("vacs.html", "_self");
+  })
+);
+
+const about = document.querySelectorAll(".about");
+about.forEach((element) =>
+  element.addEventListener("click", () => {
+    window.open("waypoint.html", "_self");
+  })
+);

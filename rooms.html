@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="Styles.css" />
     <link rel="stylesheet" href="colorThemes.css" />
+    <link rel="stylesheet" href="rooms.css" />
     <script src="script.js" defer></script>
     <title>Hotel_Celinnaya_rooms</title>
   </head>
@@ -23,19 +24,22 @@
       </div>
       <div id="headerInfo">
         <i lang="ru"
-          >Республика Казахстан<br />г. Костанай, ул. Батурсынова, 95<br /><a href="tel:+77076343424"
+          >Республика Казахстан<br />г. Костанай, <span class="avoidWrap">ул. Батурсынова, 95</span><br /><a
+            href="tel:+77076343424"
             ><span class="emoji">&#128222;</span>+7 (707) 634 34 24</a
           ><br />
           <a href="tel:+77142544366"><span class="emoji">&#128222;</span>+7 (7142) 54 43 66</a></i
         >
         <i lang="en"
-          >The Republic of Kazakhstan<br />Baytursynov Street 95, Kostanay<br /><a href="tel:+77076343424"
+          >The Republic of Kazakhstan<br />Kostanay, <span class="avoidWrap">Baytursynov Street 95</span><br /><a
+            href="tel:+77076343424"
             ><span class="emoji">&#128222;</span>+7 (707) 634 34 24</a
           ><br />
           <a href="tel:+77142544366"><span class="emoji">&#128222;</span>+7 (7142) 54 43 66</a></i
         >
         <i lang="kz"
-          >Қазақстан Республикасы<br />Қостанай, Байтұрсынұлы к-сі, 95<br /><a href="tel:+77076343424"
+          >Қазақстан Республикасы<br />Қостанай,<span class="avoidWrap">Байтұрсынұлы к-сі, 95</span><br /><a
+            href="tel:+77076343424"
             ><span class="emoji">&#128222;</span>+7 (707) 634 34 24</a
           ><br />
           <a href="tel:+77142544366"><span class="emoji">&#128222;</span>+7 (7142) 54 43 66</a></i
@@ -77,27 +81,27 @@
     </div>
     <nav id="navbar">
       <div id="navMenuContainer">
-        <div class="navMenu" id="main">
+        <div class="navMenu main" id="main">
           <i lang="ru">Главная</i>
           <i lang="en">Main page</i>
           <i lang="kz">Главная</i>
         </div>
-        <div class="navMenu" id="rooms">
+        <div class="navMenu rooms" id="rooms">
           <i lang="ru">Номера</i>
           <i lang="en">Rooms</i>
           <i lang="kz">Бөлмелер</i>
         </div>
-        <div class="navMenu" id="service">
+        <div class="navMenu service" id="service">
           <i lang="ru">Услуги</i>
           <i lang="en">Services</i>
           <i lang="kz">Қызметтер</i>
         </div>
-        <div class="navMenu" id="vacancies">
+        <div class="navMenu vacancies" id="vacancies">
           <i lang="ru">Вакансии</i>
           <i lang="en">Vacancies</i>
           <i lang="kz">Бос жұмыс орындары</i>
         </div>
-        <div class="navMenu" id="about">
+        <div class="navMenu about" id="about">
           <i lang="ru">Как добраться</i>
           <i lang="en">Find Us</i>
           <i lang="kz">Біз туралы</i>
@@ -110,14 +114,214 @@
     <article>
       <h3 lang="ru">Номера</h3>
       <h3 lang="en">Rooms</h3>
-      <h3 lang="kz">Селіндік қонақ үйі</h3>
+      <h3 lang="kz">Бөлмелер</h3>
+      <ul id="roomsList">
+        <li class="roomPreview">
+          <img src="Rooms/LuxPr.jpg" alt="Lux" />
+          <div class="room-rating">
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          </div>
+          <i lang="ru">Люкс</i>
+          <i lang="en">Lux</i>
+          <i lang="kz">Люкс</i>
+        </li>
+        <li class="roomPreview">
+          <img src="Rooms/LuxStudioPr.jpg" alt="Lux" />
+          <div class="room-rating">
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          </div>
+          <i lang="ru">Студия Люкс</i>
+          <i lang="en">Lux Studio</i>
+          <i lang="kz">Люкс</i>
+        </li>
+        <li class="roomPreview">
+          <img src="Rooms/SemiLux.jpg" alt="SemiLux" />
+          <div class="room-rating">
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;</span>
+          </div>
+          <i lang="ru">Полулюкс</i>
+          <i lang="en">Junior Suite</i>
+          <i lang="kz">Жартылай люкс</i>
+        </li>
+
+        <li class="roomPreview">
+          <img src="Rooms/StandartPr.jpg" alt="Lux" />
+          <div class="room-rating">
+            <span class="stars">&#9733;&#9733;&#9733;</span>
+          </div>
+          <i lang="ru"
+            >Стандарт <br />
+            двухместный</i
+          >
+          <i lang="en">Standart double</i>
+          <i lang="kz">Екі кісілік стандарт</i>
+        </li>
+
+        <li class="roomPreview">
+          <img src="Rooms/StandartOne.jpg" alt="Standart" />
+          <div class="room-rating">
+            <span class="stars">&#9733;&#9733;&#9733;</span>
+          </div>
+          <i lang="ru">Стандарт</i>
+          <i lang="en">Standart</i>
+          <i lang="kz">Стандарт</i>
+        </li>
+
+        <li class="roomPreview">
+          <img src="Rooms/EconomPr.jpg" alt="Lux" />
+          <div class="room-rating">
+            <span class="stars">&#9733;&#9733;</span>
+          </div>
+          <i lang="ru"
+            >Эконом <br />
+            трехместный</i
+          >
+          <i lang="en">Low Cost</i>
+          <i lang="kz">Эконом</i>
+        </li>
+
+        <li class="roomPreview">
+          <img src="Rooms/EconomPr.jpg" alt="Lux" />
+          <div class="room-rating">
+            <span class="stars">&#9733;&#9733;</span>
+          </div>
+          <i lang="ru">Эконом <br /> </i>
+          <i lang="en">Low Cost</i>
+          <i lang="kz">Эконом</i>
+        </li>
+      </ul>
       <p lang="ru">
-        Мы предлагаем различные категории номеров, которые могут удовлетворить любые запросы. Все номера оборудованы
-        удобной мебелью и техникой, чтобы вы могли чувствовать себя как дома. Мы гарантируем чистоту и свежесть
-        постельного белья и полотенец. Кроме того, наша гостиница предоставляет бесплатный Wi-Fi и кондиционеры в каждом
-        номере.
+        Мы предлагаем номера различных категорий Мы предлагаем различные категории номеров, которые могут удовлетворить
+        любые запросы. Все номера оборудованы удобной мебелью и техникой, чтобы вы могли чувствовать себя как дома. Мы
+        гарантируем чистоту и свежесть постельного белья и полотенец. Бесплатный Wi-Fi.
       </p>
       <p lang="en">Welcome to "Tselinnaya" Hotel - your home away from home in the heart of Kostanay city.</p>
+    </article>
+    <h3 lang="ru">Люкс</h3>
+    <h3 lang="en">Lux</h3>
+    <h3 lang="kz">Люкс</h3>
+    <article class="roomArticle" id="lux">
+      <div class="roomPhotos">
+        <img src="Rooms/Lux/_055.jpg" alt="Lux" />
+      </div>
+      <div class="roomDescription">
+        <p lang="ru">
+          <mark>Стоимость:</mark> 19000 тенге (сутки)<br />
+          15000 тенге (полсуток)<br /><br />
+          <mark>Описание:</mark> двухкомнатный номер для одного-двух человек, большая кровать, диван. <br />
+          Площадь номера 37.8кв.м. <br /><br />
+          <mark>Дополнительно:</mark> телефон, холодильник, кабельное телевидение, кондиционер, фен, электрочайник,
+          Wi-Fi, круглосуточная парковка.
+        </p>
+      </div>
+    </article>
+    <h3 lang="ru">Студия люкс</h3>
+    <h3 lang="en">Lux</h3>
+    <h3 lang="kz">Люкс</h3>
+    <article class="roomArticle" id="luxStudio">
+      <div class="roomPhotos">
+        <img src="Rooms/LuxStudio/_032.jpg" alt="Lux" />
+      </div>
+      <div class="roomDescription">
+        <p lang="ru">
+          <mark>Стоимость:</mark> 19000тенге<br />
+          15000 тенге (полсуток)<br /><br />
+          <mark>Описание:</mark> большой однокомнатный номер, большая кровать, диван<br />
+          Площадь номера 39кв.м. <br /><br />
+          <mark>Дополнительно:</mark> телефон, холодильник, кабельное телевидение, кондиционер, фен, электрочайникWi-Fi,
+          круглосуточная парковка.
+        </p>
+      </div>
+    </article>
+
+    <h3 lang="ru">Полулюкс одноместный</h3>
+    <h3 lang="en">Junior Suite</h3>
+    <h3 lang="kz">Жартылай люкс</h3>
+    <article class="roomArticle" id="semiLux">
+      <div class="roomPhotos">
+        <img src="Rooms/Semilux/_037.jpg" alt="Lux" />
+      </div>
+      <div class="roomDescription">
+        <p lang="ru">
+          <mark>Стоимость:</mark> 11500 тенге (сутки)<br />
+          9500 тенге (полсуток)<br /><br />
+          <mark>Описание:</mark> однокомнатный номер для одного, большая кровать <br />
+          Площадь номера 17кв.м. <br /><br />
+          <mark>Дополнительно:</mark> телефон, холодильник, кабельное телевидение, кондиционер, электрочайник, Wi-Fi,
+          круглосуточная парковка.
+        </p>
+      </div>
+    </article>
+
+    <h3 lang="ru">Стандарт двухместный</h3>
+    <h3 lang="en">Standart double</h3>
+    <h3 lang="kz">Жартылай люкс</h3>
+    <article class="roomArticle" id="standartDuo">
+      <div class="roomPhotos">
+        <img src="Rooms/Standart Duo/_046.jpg" alt="StandartDuo" />
+      </div>
+      <div class="roomDescription">
+        <p lang="ru">
+          <mark>Стоимость:</mark> 14000 тенге (сутки)<br />
+          10000 тенге (полсуток)<br /><br />
+          <mark>Описание:</mark> номер для двоих, две кровати. <br />
+          Площадь номера 17кв.м. <br /><br />
+          <mark>Дополнительно:</mark> телефон, холодильник, кабельное телевидение, Wi-Fi, круглосуточная парковка.
+        </p>
+      </div>
+    </article>
+
+    <h3 lang="ru">Стандарт одноместный</h3>
+    <h3 lang="en">Standart</h3>
+    <h3 lang="kz">Жартылай люкс</h3>
+    <article class="roomArticle" id="standart">
+      <div class="roomPhotos">
+        <img src="Rooms/Standart/_029.jpg" alt="standart" />
+      </div>
+      <div class="roomDescription">
+        <p lang="ru">
+          <mark>Стоимость:</mark> 9500 тенге (сутки)<br />
+          8000 тенге (полсуток)<br /><br />
+          <mark>Описание:</mark> номер для одного, одна кровать. <br />
+          Площадь номера 14кв.м. <br /><br />
+          <mark>Дополнительно:</mark> телефон, холодильник, кабельное телевидение, Wi-Fi, круглосуточная парковка.
+        </p>
+      </div>
+    </article>
+
+    <h3 lang="ru">Эконом</h3>
+    <h3 lang="en">Low Cost</h3>
+    <h3 lang="kz">Жартылай люкс</h3>
+    <article class="roomArticle" id="econom">
+      <div class="roomPhotos">
+        <img src="Rooms/Econom/_050.jpg" alt="Eco" />
+      </div>
+      <div class="roomDescription">
+        <p lang="ru">
+          <mark>Стоимость:</mark> <mark>Стоимость:</mark> 5000 тенге к-место/сутки<br />
+          заселение на полсуток не предусмотрено.<br /><br />
+          <mark>Описание:</mark> бюджетный номер на 3х человек, 3 кровати, шкаф и тумбочки в номере <br /><br />
+          <mark>Дополнительно:</mark> Wi-Fi, круглосуточная парковка.
+        </p>
+      </div>
+    </article>
+    <h3 lang="ru">Эконом</h3>
+    <h3 lang="en">Low Cost</h3>
+    <h3 lang="kz">Жартылай люкс</h3>
+    <article class="roomArticle" id="econom5">
+      <div class="roomPhotos">
+        <img src="Rooms/Econom/_048.jpg" alt="Eco" />
+      </div>
+      <div class="roomDescription">
+        <p lang="ru">
+          <mark>Стоимость:</mark> 4000 тенге к-место/сутки<br />
+          заселение на полсуток не предусмотрено.
+          <br /><br />
+          <mark>Описание:</mark> бюджетный номер из двух комнат, до 3х кроватей на комнату, шкаф и тумбочки в номерах
+          <br /><br />
+          <mark>Дополнительно:</mark> Wi-Fi, круглосуточная парковка.
+        </p>
+      </div>
     </article>
   </body>
 </html>
