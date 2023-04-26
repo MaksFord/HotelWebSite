@@ -52,3 +52,7 @@ article {
   background-color: var(--primary);
   color: var(--gold);
 }
+
+.linkedP:hover {
+  background-color: var(--gold);
+}

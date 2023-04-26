@@ -156,7 +156,8 @@ button:active,
 
 .bottomLink:hover,
 .navMenu:hover,
-#bookRoomContainer:hover {
+#bookRoomContainer:hover,
+.mapLink:hover {
   cursor: pointer;
 }
 .emojiImages {
@@ -183,7 +184,7 @@ button:active,
 
 @media (min-width: 1700px) {
   html {
-    font-size: calc(100vw / 100);
+    font-size: calc(100vw / 90);
     padding-left: calc((100%-1280) / 20);
     padding-right: calc((100%-1280) / 20);
   }
@@ -251,6 +252,18 @@ button:active,
     font-size: 1rem;
     padding: 0.5rem 0.5rem;
     margin-bottom: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .header {
+    grid-row-gap: 0;
+    grid-column-gap: 0;
+    padding-bottom: 0.3rem;
+    padding-top: 0.3rem;
+  }
+  #socials_Lang {
+    margin-top: 0.3rem;
   }
 }
 

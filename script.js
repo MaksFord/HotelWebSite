@@ -88,3 +88,10 @@ about.forEach((element) =>
     window.open("waypoint.html", "_self");
   })
 );
+
+const mapLink = document.querySelectorAll(".mapLink");
+mapLink.forEach((element) =>
+  element.addEventListener("click", () => {
+    window.open("https://goo.gl/maps/cgbvrPNkXfq9QDsw8", "_blank");
+  })
+);
