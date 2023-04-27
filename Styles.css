@@ -276,3 +276,7 @@ button:active,
     font-size: 1rem;
   }
 }
+
+.compass {
+  font-style: normal;
+}

@@ -55,4 +55,10 @@ article {
 
 .linkedP:hover {
   background-color: var(--gold);
+  color: white;
+}
+
+.bookRoomMini {
+  color: var(--gold);
+  border-color: var(--gold);
 }

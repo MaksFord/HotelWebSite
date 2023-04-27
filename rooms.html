@@ -24,10 +24,10 @@
       </div>
       <div id="headerInfo">
         <i lang="ru"
-          >Республика Казахстан<br />г. Костанай, <span class="avoidWrap">ул. Батурсынова, 95</span><br /><a
-            href="tel:+77076343424"
-            ><span class="emoji">&#128222;</span>+7 (707) 634 34 24</a
-          ><br />
+          ><span class="mapLink"
+            ><span class="compass">&#129517;</span>Республика Казахстан<br />г. Костанай,
+            <span class="avoidWrap">ул. Батурсынова, 95</span></span
+          ><br /><a href="tel:+77076343424"><span class="emoji">&#128222;</span>+7 (707) 634 34 24</a><br />
           <a href="tel:+77142544366"><span class="emoji">&#128222;</span>+7 (7142) 54 43 66</a></i
         >
         <i lang="en"
@@ -101,6 +101,7 @@
           <i lang="en">Vacancies</i>
           <i lang="kz">Бос жұмыс орындары</i>
         </div>
+
         <div class="navMenu about" id="about">
           <i lang="ru">Как добраться</i>
           <i lang="en">Find Us</i>
@@ -111,10 +112,11 @@
 
     <!--Main page starting here-->
 
-    <article>
+    <article class="introArticle">
       <h3 lang="ru">Номера</h3>
       <h3 lang="en">Rooms</h3>
       <h3 lang="kz">Бөлмелер</h3>
+
       <ul id="roomsList">
         <li class="roomPreview">
           <img src="Rooms/LuxPr.jpg" alt="Lux" />
@@ -125,6 +127,7 @@
           <i lang="en">Lux</i>
           <i lang="kz">Люкс</i>
         </li>
+
         <li class="roomPreview">
           <img src="Rooms/LuxStudioPr.jpg" alt="Lux" />
           <div class="room-rating">
@@ -134,6 +137,7 @@
           <i lang="en">Lux Studio</i>
           <i lang="kz">Люкс</i>
         </li>
+
         <li class="roomPreview">
           <img src="Rooms/SemiLux.jpg" alt="SemiLux" />
           <div class="room-rating">
@@ -190,22 +194,18 @@
           <i lang="kz">Эконом</i>
         </li>
       </ul>
-      <p lang="ru">
-        Мы предлагаем номера различных категорий Мы предлагаем различные категории номеров, которые могут удовлетворить
-        любые запросы. Все номера оборудованы удобной мебелью и техникой, чтобы вы могли чувствовать себя как дома. Мы
-        гарантируем чистоту и свежесть постельного белья и полотенец. Бесплатный Wi-Fi.
-      </p>
-      <p lang="en">Welcome to "Tselinnaya" Hotel - your home away from home in the heart of Kostanay city.</p>
     </article>
     <h3 lang="ru">Люкс</h3>
     <h3 lang="en">Lux</h3>
     <h3 lang="kz">Люкс</h3>
     <article class="roomArticle" id="lux">
       <div class="roomPhotos">
-        <img src="Rooms/Lux/_055.jpg" alt="Lux" />
+        <picture class="roomPhoto">
+          <img src="Rooms/Lux/_055.jpg" alt="Lux" />
+        </picture>
       </div>
       <div class="roomDescription">
-        <p lang="ru">
+        <p lang="ru" class="infoDescription">
           <mark>Стоимость:</mark> 19000 тенге (сутки)<br />
           15000 тенге (полсуток)<br /><br />
           <mark>Описание:</mark> двухкомнатный номер для одного-двух человек, большая кровать, диван. <br />
@@ -213,6 +213,17 @@
           <mark>Дополнительно:</mark> телефон, холодильник, кабельное телевидение, кондиционер, фен, электрочайник,
           Wi-Fi, круглосуточная парковка.
         </p>
+        <p lang="ru">
+          Вы можете забронировать номер через сайт или позвонив по телефону <br />
+          <a class="phoneLinkText" href="tel:+77076343424"><span class="emoji">&#128222;</span>+7 (707) 634 34 24</a
+          ><br />
+          <a class="phoneLinkText" href="tel:+77142544366"><span class="emoji">&#128222;</span>+7 (7142) 54 43 66</a>
+        </p>
+        <button class="bookRoomMini">
+          <i lang="ru">Забронировать номер</i>
+          <i lang="en">Book the Room</i>
+          <i lang="kz">Нөмірді брондау</i>
+        </button>
       </div>
     </article>
     <h3 lang="ru">Студия люкс</h3>
@@ -220,10 +231,12 @@
     <h3 lang="kz">Люкс</h3>
     <article class="roomArticle" id="luxStudio">
       <div class="roomPhotos">
-        <img src="Rooms/LuxStudio/_032.jpg" alt="Lux" />
+        <picture class=".articlePhoto">
+          <img src="Rooms/LuxStudio/_032.jpg" alt="Lux" />
+        </picture>
       </div>
       <div class="roomDescription">
-        <p lang="ru">
+        <p lang="ru" class="infoDescription">
           <mark>Стоимость:</mark> 19000тенге<br />
           15000 тенге (полсуток)<br /><br />
           <mark>Описание:</mark> большой однокомнатный номер, большая кровать, диван<br />
@@ -231,6 +244,17 @@
           <mark>Дополнительно:</mark> телефон, холодильник, кабельное телевидение, кондиционер, фен, электрочайникWi-Fi,
           круглосуточная парковка.
         </p>
+        <p lang="ru">
+          Вы можете забронировать номер через сайт или позвонив по телефону <br />
+          <a class="phoneLinkText" href="tel:+77076343424"><span class="emoji">&#128222;</span>+7 (707) 634 34 24</a
+          ><br />
+          <a class="phoneLinkText" href="tel:+77142544366"><span class="emoji">&#128222;</span>+7 (7142) 54 43 66</a>
+        </p>
+        <button class="bookRoomMini">
+          <i lang="ru">Забронировать номер</i>
+          <i lang="en">Book the Room</i>
+          <i lang="kz">Нөмірді брондау</i>
+        </button>
       </div>
     </article>
 
@@ -242,7 +266,7 @@
         <img src="Rooms/Semilux/_037.jpg" alt="Lux" />
       </div>
       <div class="roomDescription">
-        <p lang="ru">
+        <p lang="ru" class="infoDescription">
           <mark>Стоимость:</mark> 11500 тенге (сутки)<br />
           9500 тенге (полсуток)<br /><br />
           <mark>Описание:</mark> однокомнатный номер для одного, большая кровать <br />
@@ -250,6 +274,17 @@
           <mark>Дополнительно:</mark> телефон, холодильник, кабельное телевидение, кондиционер, электрочайник, Wi-Fi,
           круглосуточная парковка.
         </p>
+        <p lang="ru">
+          Вы можете забронировать номер через сайт или позвонив по телефону <br />
+          <a class="phoneLinkText" href="tel:+77076343424"><span class="emoji">&#128222;</span>+7 (707) 634 34 24</a
+          ><br />
+          <a class="phoneLinkText" href="tel:+77142544366"><span class="emoji">&#128222;</span>+7 (7142) 54 43 66</a>
+        </p>
+        <button class="bookRoomMini">
+          <i lang="ru">Забронировать номер</i>
+          <i lang="en">Book the Room</i>
+          <i lang="kz">Нөмірді брондау</i>
+        </button>
       </div>
     </article>
 
@@ -261,13 +296,24 @@
         <img src="Rooms/Standart Duo/_046.jpg" alt="StandartDuo" />
       </div>
       <div class="roomDescription">
-        <p lang="ru">
+        <p lang="ru" class="infoDescription">
           <mark>Стоимость:</mark> 14000 тенге (сутки)<br />
           10000 тенге (полсуток)<br /><br />
           <mark>Описание:</mark> номер для двоих, две кровати. <br />
           Площадь номера 17кв.м. <br /><br />
           <mark>Дополнительно:</mark> телефон, холодильник, кабельное телевидение, Wi-Fi, круглосуточная парковка.
         </p>
+        <p lang="ru">
+          Вы можете забронировать номер через сайт или позвонив по телефону <br />
+          <a class="phoneLinkText" href="tel:+77076343424"><span class="emoji">&#128222;</span>+7 (707) 634 34 24</a
+          ><br />
+          <a class="phoneLinkText" href="tel:+77142544366"><span class="emoji">&#128222;</span>+7 (7142) 54 43 66</a>
+        </p>
+        <button class="bookRoomMini">
+          <i lang="ru">Забронировать номер</i>
+          <i lang="en">Book the Room</i>
+          <i lang="kz">Нөмірді брондау</i>
+        </button>
       </div>
     </article>
 
@@ -279,13 +325,24 @@
         <img src="Rooms/Standart/_029.jpg" alt="standart" />
       </div>
       <div class="roomDescription">
-        <p lang="ru">
+        <p lang="ru" class="infoDescription">
           <mark>Стоимость:</mark> 9500 тенге (сутки)<br />
           8000 тенге (полсуток)<br /><br />
           <mark>Описание:</mark> номер для одного, одна кровать. <br />
           Площадь номера 14кв.м. <br /><br />
           <mark>Дополнительно:</mark> телефон, холодильник, кабельное телевидение, Wi-Fi, круглосуточная парковка.
         </p>
+        <p lang="ru">
+          Вы можете забронировать номер через сайт или позвонив по телефону <br />
+          <a class="phoneLinkText" href="tel:+77076343424"><span class="emoji">&#128222;</span>+7 (707) 634 34 24</a
+          ><br />
+          <a class="phoneLinkText" href="tel:+77142544366"><span class="emoji">&#128222;</span>+7 (7142) 54 43 66</a>
+        </p>
+        <button class="bookRoomMini">
+          <i lang="ru">Забронировать номер</i>
+          <i lang="en">Book the Room</i>
+          <i lang="kz">Нөмірді брондау</i>
+        </button>
       </div>
     </article>
 
@@ -297,14 +354,26 @@
         <img src="Rooms/Econom/_050.jpg" alt="Eco" />
       </div>
       <div class="roomDescription">
-        <p lang="ru">
-          <mark>Стоимость:</mark> <mark>Стоимость:</mark> 5000 тенге к-место/сутки<br />
+        <p lang="ru" class="infoDescription">
+          <mark>Стоимость:</mark> 5000 тенге к-место/сутки<br />
           заселение на полсуток не предусмотрено.<br /><br />
           <mark>Описание:</mark> бюджетный номер на 3х человек, 3 кровати, шкаф и тумбочки в номере <br /><br />
           <mark>Дополнительно:</mark> Wi-Fi, круглосуточная парковка.
         </p>
+        <p lang="ru">
+          Вы можете забронировать номер через сайт или позвонив по телефону <br />
+          <a class="phoneLinkText" href="tel:+77076343424"><span class="emoji">&#128222;</span>+7 (707) 634 34 24</a
+          ><br />
+          <a class="phoneLinkText" href="tel:+77142544366"><span class="emoji">&#128222;</span>+7 (7142) 54 43 66</a>
+        </p>
+        <button class="bookRoomMini">
+          <i lang="ru">Забронировать номер</i>
+          <i lang="en">Book the Room</i>
+          <i lang="kz">Нөмірді брондау</i>
+        </button>
       </div>
     </article>
+
     <h3 lang="ru">Эконом</h3>
     <h3 lang="en">Low Cost</h3>
     <h3 lang="kz">Жартылай люкс</h3>
@@ -313,7 +382,7 @@
         <img src="Rooms/Econom/_048.jpg" alt="Eco" />
       </div>
       <div class="roomDescription">
-        <p lang="ru">
+        <p lang="ru" class="infoDescription">
           <mark>Стоимость:</mark> 4000 тенге к-место/сутки<br />
           заселение на полсуток не предусмотрено.
           <br /><br />
@@ -321,7 +390,109 @@
           <br /><br />
           <mark>Дополнительно:</mark> Wi-Fi, круглосуточная парковка.
         </p>
+        <p lang="ru">
+          Вы можете забронировать номер через сайт или позвонив по телефону <br />
+          <a class="phoneLinkText" href="tel:+77076343424"><span class="emoji">&#128222;</span>+7 (707) 634 34 24</a
+          ><br />
+          <a class="phoneLinkText" href="tel:+77142544366"><span class="emoji">&#128222;</span>+7 (7142) 54 43 66</a>
+        </p>
+        <button class="bookRoomMini">
+          <i lang="ru">Забронировать номер</i>
+          <i lang="en">Book the Room</i>
+          <i lang="kz">Нөмірді брондау</i>
+        </button>
       </div>
     </article>
+    <!--footer-->
+
+    <nav class="footer">
+      <div id="footerElements">
+        <div id="bottomLogo">
+          <img id="mainLogoBottom" src="SitePics/mainLogo.svg" />
+        </div>
+
+        <ul id="bottomLinks">
+          <i class="bottomTitle" lang="ru">Карта сайта</i>
+          <i class="bottomTitle" lang="en">Sitemap</i>
+          <i class="bottomTitle" lang="kz">Cайт картасы</i>
+          <li class="bottomLink main">
+            <i lang="ru">Главная</i>
+            <i lang="en">Main page</i>
+            <i lang="kz">Главная</i>
+          </li>
+          <li class="bottomLink rooms">
+            <i lang="ru">Номера</i>
+            <i lang="en">Rooms</i>
+            <i lang="kz">Бөлмелер</i>
+          </li>
+          <li class="bottomLink service">
+            <i lang="ru">Услуги</i>
+            <i lang="en">Services</i>
+            <i lang="kz">Қызметтер</i>
+          </li>
+          <li class="bottomLink vacancies">
+            <i lang="ru">Вакансии</i>
+            <i lang="en">Vacancies</i>
+            <i lang="kz">Бос жұмыс орындары</i>
+          </li>
+          <li class="bottomLink about">
+            <i lang="ru">Как добраться</i>
+            <i lang="en">Find Us</i>
+            <i lang="kz">Біз туралы</i>
+          </li>
+        </ul>
+
+        <ul id="contactUs">
+          <i class="bottomTitle" lang="ru">Связаться с нами</i>
+          <i class="bottomTitle" lang="en">Contact Us</i>
+          <i class="bottomTitle" lang="kz">Селіндік қонақ үйі</i>
+          <li class="contactUsBottom">
+            <a href="whatsapp://send?phone=77076343424">
+              <span><img class="emojiImages" src="SitePics/instagram.svg" /></span> Whatsapp</a
+            >
+          </li>
+          <li class="contactUsBottom">
+            <a href="mailto:celinnaya@mail.ru"><span>&#128231;</span>celinnaya@mail.ru</a>
+          </li>
+          <li class="contactUsBottom">
+            <a href="mailto:gcelinnaya@gmail.com"><span>&#128231;</span>gcelinnaya@gmail.com</a>
+          </li>
+          <li class="contactUsBottom">
+            <a href="tel:+77076343424"><span>&#128222;</span>+7 (707) 634 34 24</a>
+          </li>
+          <li class="contactUsBottom">
+            <a href="tel:+77142544366"><span>&#128222;</span>+7 (7142) 54 43 66</a>
+          </li>
+        </ul>
+
+        <ul id="bottomSocials">
+          <i class="bottomTitle" lang="ru">Мы в соцсетях</i>
+          <i class="bottomTitle" lang="en">Our socials</i>
+          <i class="bottomTitle" lang="kz">Селіндік қонақ үйі</i>
+          <li class="contactUsBottom">
+            <a href="https://www.facebook.com/HotelCelinnaya/" target="_blank" rel="noopener"
+              ><span><img class="emojiImages" src="SitePics/facebook.svg" /></span> Facebook</a
+            >
+          </li>
+          <li class="contactUsBottom">
+            <a href="https://www.instagram.com/celinnayakostanai/" target="_blank" rel="noopener"
+              ><span><img class="emojiImages" src="SitePics/instagram.svg" /></span> Instagram</a
+            >
+          </li>
+          <li class="contactUsBottom">
+            <a href="https://vk.com/" target="_blank" rel="noopener"
+              ><span><img class="emojiImages" src="SitePics/vk.svg" /></span> VKontanke</a
+            >
+          </li>
+          <li class="contactUsBottom">
+            <a href="https://ok.ru/" target="_blank" rel="noopener"
+              ><span><img class="emojiImages" src="SitePics/ok-ru.svg" /> </span> OdnoKlassniki</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div id="copyrightNotice">Hotel_Celinnaya (c) 2023</div>
+    </nav>
   </body>
 </html>
