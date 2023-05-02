@@ -5,8 +5,7 @@
   justify-content: start;
   align-items: center;
   font-size: 1.5rem;
-  margin: 0;
-  padding: 0;
+
   width: 10rem;
 }
 .roomPreview > img {
@@ -31,14 +30,21 @@ mark {
 }
 
 h3 {
-  margin-top: 4rem;
   text-align: center;
   font-size: 1.5rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+main {
+  margin: 0 10%;
+}
+article {
+  margin-bottom: 5rem;
 }
 .roomArticle {
+  margin: 0.5rem;
   display: flex;
   font-size: 1rem;
-  margin: 30px 10%;
   gap: 1rem;
 }
 

@@ -3,6 +3,7 @@
   --button: #6e0707;
   --secondary: #f1afaf;
   --accent: #ffffff;
+  --main: white;
   --text: #000000;
   --h3: #170714;
   --article: #f5f5f5;
@@ -15,6 +16,7 @@
 
   --secondary: #191919;
   --accent: #ffffff;
+  --main: #0f0d7a;
   --h3: #94fff8;
   --text: #ffffff;
   --article: #01003f;
@@ -23,8 +25,16 @@
 }
 body {
   background-color: var(--secondary);
+}
+main {
+  background-color: var(--main);
   color: var(--text);
 }
+article {
+  background-color: var(--main);
+  color: var(--text);
+}
+
 h3 {
   color: var(--h3);
 }
@@ -60,9 +70,6 @@ button {
   background-color: var(--button);
 }
 
-article {
-  background-color: var(--secondary);
-}
 mark {
   color: var(--h3);
 }
@@ -89,4 +96,7 @@ mark {
 
 .stars {
   color: var(--highlight);
+}
+.roomPreview > i {
+  color: var(--text);
 }
