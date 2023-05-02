@@ -63,6 +63,7 @@ a {
 .divider {
   height: 1.5rem;
 }
+#themeSwitcher,
 .buttonLang {
   width: 3rem;
   border-radius: 0.5rem;
@@ -75,6 +76,9 @@ a {
 #language {
   display: flex;
   justify-content: center;
+}
+#themeSwitcher {
+  margin-right: 1rem;
 }
 #socials {
   display: flex;

@@ -1,64 +1,92 @@
 :root {
   --primary: #8b0000;
-  --secondary: #bcbcbc;
+  --button: #6e0707;
+  --secondary: #f1afaf;
   --accent: #ffffff;
-  --background: #f5f5f5;
-  --gold: #ffd700;
+  --text: #000000;
+  --h3: #170714;
+  --article: #f5f5f5;
+  --highlight: #ffd700;
+  --text: black;
+}
+.darkTheme {
+  --primary: #2a019c;
+  --button: #1d0365;
+
+  --secondary: #191919;
+  --accent: #ffffff;
+  --h3: #94fff8;
+  --text: #ffffff;
+  --article: #01003f;
+  --highlight: #65f7ff;
+  --text: #ecedf6;
+}
+body {
+  background-color: var(--secondary);
+  color: var(--text);
+}
+h3 {
+  color: var(--h3);
 }
 .header {
   background-color: var(--primary);
-  color: var(--gold);
+  color: var(--highlight);
 }
 #headerInfo {
-  background-color: ;
+  background-color: var(--primary);
 }
 a {
-  color: var(--gold);
+  color: var(--highlight);
 }
 .emoji {
   color: transparent;
-  text-shadow: 0 0 0 var(--gold);
+  text-shadow: 0 0 0 var(--highlight);
 }
 
 #bookRoomContainer {
   background-color: var(--primary);
-  color: var(--gold);
-  border-color: var(--gold);
+  color: var(--highlight);
+  border-color: var(--highlight);
 }
 #navMenuContainer {
-  border-color: var(--gold);
+  border-color: var(--highlight);
 }
 .navMenu {
   background-color: var(--primary);
-  color: var(--gold);
-  border-color: var(--gold);
+  color: var(--highlight);
+  border-color: var(--highlight);
 }
 button {
-  background-color: #620202;
+  background-color: var(--button);
 }
-html {
-  background-color: var(--background);
-}
+
 article {
-  background-color: var(--background);
+  background-color: var(--secondary);
+}
+mark {
+  color: var(--h3);
 }
 #advantages > li {
   background-color: var(--primary);
-  color: var(--gold);
-  border: solid var(--gold);
+  color: var(--highlight);
+  border: solid var(--highlight);
 }
 
 .footer {
   background-color: var(--primary);
-  color: var(--gold);
+  color: var(--highlight);
 }
 
 .linkedP:hover {
-  background-color: var(--gold);
-  color: white;
+  background-color: var(--highlight);
+  color: var(--accent);
 }
 
 .bookRoomMini {
-  color: var(--gold);
-  border-color: var(--gold);
+  color: var(--highlight);
+  border-color: var(--highlight);
+}
+
+.stars {
+  color: var(--highlight);
 }

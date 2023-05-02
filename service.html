@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="Styles.css" />
+    <link rel="stylesheet" href="service.css" />
     <link rel="stylesheet" href="colorThemes.css" />
     <script src="script.js" defer></script>
     <title>Hotel_Celinnaya_services</title>
@@ -64,6 +65,7 @@
         </div>
         <div class="divider"></div>
         <div id="language">
+          <button id="themeSwitcher"><img src="SitePics/theme.svg" alt="switchColorTheme" /></button>
           <button id="ruLang" class="buttonLang" lang="ru"><img src="SitePics/ru.svg" alt="ru" /></button>
           <button id="enLang" class="buttonLang" lang="en"><img src="sitePics/gb.svg" alt="en" /></button>
           <button id="kzLang" class="buttonLang" lang="kz"><img src="sitePics/kz.svg" alt="kz" /></button>
@@ -111,9 +113,9 @@
 
     <!--Main page starting here-->
 
-    <article>
-      <h3 lang="ru">Гостиничный комплекс "Целинный"</h3>
-      <h3 lang="en">Hotel "Celinnaya"</h3>
+    <article class="intro">
+      <h3 lang="ru">Услуги</h3>
+      <h3 lang="en">Service</h3>
       <h3 lang="kz">Селіндік қонақ үйі</h3>
 
       <div class="imageContainer">
@@ -128,23 +130,75 @@
       <p lang="en">Welcome to "Tselinnaya" Hotel - your home away from home in the heart of Kostanay city.</p>
       <p lang="kz">Помимо проживания гостиница "Целинная" предлагает широкий спектр дополнительных услуг</p>
     </article>
+    <button id="theme-switcher">Switch Theme</button>
 
-    <article>
-      <h3 lang="ru">Питание</h3>
-      <h3 lang="en">Meals</h3>
-      <h3 lang="kz">Селіндік қонақ үйі</h3>
-
-      <div class="imageContainer">
-        <picture class=".articlePhoto">
-          <source media="(min-width:1000px)" srcset="Main/Entrance1026.jpg" alt="Entrance1000px" />
-          <source media="(min-width:600px)" srcset="Main/Entrance640.jpg" alt="Entrance600px" />
-          <img src="Main/Entrance300.jpg" alt="Entrance" />
+    <h3 lang="ru">Ресторан</h3>
+    <h3 lang="en">Restaraunt</h3>
+    <h3 lang="kz">ресторан</h3>
+    <article class="roomArticle" id="lux">
+      <div class="roomPhotos">
+        <picture class="roomPhoto">
+          <img src="Rooms/Lux/_055.jpg" alt="Lux" />
         </picture>
       </div>
+      <div class="roomDescription">
+        <p lang="ru" class="infoDescription">
+          <mark>Описание:</mark>
 
-      <p lang="ru">Помимо проживания гостиница "Целинная" предлагает широкий спектр дополнительных услуг</p>
-      <p lang="en">Welcome to "Tselinnaya" Hotel - your home away from home in the heart of Kostanay city.</p>
-      <p lang="kz">Помимо проживания гостиница "Целинная" предлагает широкий спектр дополнительных услуг</p>
+          В первом текстовом разделе находится описание организации или предоставляемых услуг. Тут можно упомянуть об
+          акциях, ценах, преимуществам- на выбор владельца. -текст<br />
+          -текст<br />
+          -текст<br />
+          -текст<br />
+          -текст<br />
+          .....<br />
+          <mark>Часы работы:</mark> Ежедневно с 7-00 до 22-00<br /><br />
+          <mark>Контакты:</mark> <br />
+          <a class="phoneLinkText" href="tel:+77076343424"><span class="emoji">&#128222;</span>+7 (707) 634 34 24</a
+          ><br />
+          <a class="phoneLinkText" href="tel:+77142544366"><span class="emoji">&#128222;</span>+7 (7142) 54 43 66</a>
+        </p>
+      </div>
+    </article>
+    <div class="imageGalleryPortrait">
+      <picture class="galleryPhoto">
+        <img src="Service/Restaurant/WhatsApp Image 2023-04-28 at 13.53.39.jpg" alt="photo1" />
+      </picture>
+      <picture class="galleryPhoto">
+        <img src="Service/Restaurant/WhatsApp Image 2023-04-28 at 13.54.07.jpg" alt="photo1" />
+      </picture>
+      <picture class="galleryPhoto">
+        <img src="Service/Restaurant/WhatsApp Image 2023-04-28 at 13.54.42.jpg" alt="photo1" />
+      </picture>
+      <picture class="galleryPhoto">
+        <img src="Service/Restaurant/WhatsApp Image 2023-04-28 at 13.55.08.jpg" alt="photo1" />
+      </picture>
+      <picture class="galleryPhoto">
+        <img src="Service/Restaurant/WhatsApp Image 2023-04-28 at 13.56.44.jpg" alt="photo1" />
+      </picture>
+    </div>
+
+    <h3 lang="ru">Кафе "Целинное"</h3>
+    <h3 lang="en">Restaraunt</h3>
+    <h3 lang="kz">ресторан</h3>
+    <article class="roomArticle" id="lux">
+      <div class="roomPhotos">
+        <picture class="roomPhoto">
+          <img src="Rooms/Lux/_055.jpg" alt="Lux" />
+        </picture>
+      </div>
+      <div class="roomDescription">
+        <p lang="ru" class="infoDescription">
+          <mark>Описание:</mark>
+          В первом текстовом разделе находится описание организации или предоставляемых услуг. Тут можно упомянуть об
+          акциях, ценах, преимуществам- на выбор владельца.<br />
+          <mark>Часы работы:</mark> Ежедневно с 7-00 до 22-00<br /><br />
+          <mark>Контакты:</mark> <br />
+          <a class="phoneLinkText" href="tel:+77076343424"><span class="emoji">&#128222;</span>+7 (707) 634 34 24</a
+          ><br />
+          <a class="phoneLinkText" href="tel:+77142544366"><span class="emoji">&#128222;</span>+7 (7142) 54 43 66</a>
+        </p>
+      </div>
     </article>
 
     <!--footer-->

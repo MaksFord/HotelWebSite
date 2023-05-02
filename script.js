@@ -1,6 +1,11 @@
 const defaultLanguage = navigator.language.substring(0, 2) || "ru";
 let language = localStorage.getItem("language") || defaultLanguage;
 selectLanguage(language);
+const body = document.body;
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme === "dark") {
+  body.classList.toggle("darkTheme");
+}
 
 const ruText = document.getElementById("ruLang");
 ruText.addEventListener("click", () => selectLanguage("ru"));
@@ -95,3 +100,14 @@ mapLink.forEach((element) =>
     window.open("https://goo.gl/maps/cgbvrPNkXfq9QDsw8", "_blank");
   })
 );
+
+//theme SWITCHER
+
+const themeSwitcher = document.getElementById("themeSwitcher");
+
+themeSwitcher.addEventListener("click", () => {
+  body.classList.toggle("darkTheme");
+
+  const currentTheme = body.classList.contains("darkTheme") ? "dark" : "default";
+  localStorage.setItem("theme", currentTheme);
+});
