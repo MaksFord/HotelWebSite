@@ -8,11 +8,14 @@
 
   width: 10rem;
   padding: 1rem;
+  border-radius: 2rem;
 }
 .roomPreview:hover {
   border: 2px solid var(--highlight);
-  border-radius: 2rem;
+
   background-color: var(--article);
+  box-shadow: 0 0 1rem #0000006a;
+  transition: 0.5s;
 }
 .roomPreview > img {
   width: 100%;
@@ -223,6 +226,7 @@ article {
   width: 15%;
   height: 30%;
   background-color: black;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
