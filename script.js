@@ -111,3 +111,49 @@ themeSwitcher.addEventListener("click", () => {
   const currentTheme = body.classList.contains("darkTheme") ? "dark" : "default";
   localStorage.setItem("theme", currentTheme);
 });
+
+document.getElementById("luxLeft").addEventListener("click", () => switchPhotoLeft("radioButton"));
+document.getElementById("luxRight").addEventListener("click", () => switchPhotoRight("radioButton"));
+
+//function for buttons
+function switchPhotoRight(elementName) {
+  const radios = document.getElementsByName(elementName);
+  let currentRadioIndex = -1;
+  for (let i = 0; i < radios.length; i++) {
+    if (radios[i].checked) {
+      currentRadioIndex = i;
+      break;
+    }
+  }
+  if (currentRadioIndex !== -1) {
+    radios[currentRadioIndex].checked = false;
+    if (currentRadioIndex === radios.length - 1) {
+      radios[0].checked = true;
+    } else {
+      radios[currentRadioIndex + 1].checked = true;
+    }
+  } else {
+    radios[0].checked = true;
+  }
+}
+
+function switchPhotoLeft(elementName) {
+  const radios = document.getElementsByName(elementName);
+  let currentRadioIndex = -1;
+  for (let i = 0; i < radios.length; i++) {
+    if (radios[i].checked) {
+      currentRadioIndex = i;
+      break;
+    }
+  }
+  if (currentRadioIndex !== -1) {
+    radios[currentRadioIndex].checked = false;
+    if (currentRadioIndex === 0) {
+      radios[radios.length - 1].checked = true;
+    } else {
+      radios[currentRadioIndex - 1].checked = true;
+    }
+  } else {
+    radios[0].checked = true;
+  }
+}

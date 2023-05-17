@@ -7,10 +7,17 @@
   font-size: 1.5rem;
 
   width: 10rem;
+  padding: 1rem;
+}
+.roomPreview:hover {
+  border: 2px solid var(--highlight);
+  border-radius: 2rem;
+  background-color: var(--article);
 }
 .roomPreview > img {
   width: 100%;
   height: auto;
+  border-radius: 0.5rem;
 }
 #roomsList {
   display: flex;
@@ -18,12 +25,7 @@
   flex-wrap: wrap;
   gap: 10px;
 }
-.roomPhotos img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+
 mark {
   font-weight: bold;
   background-color: inherit;
@@ -46,17 +48,23 @@ article {
   display: flex;
   font-size: 1rem;
   gap: 1rem;
+  padding-bottom: 2rem;
 }
 
 .roomPhotos {
+  width: 40rem;
+  height: auto;
+
+  display: block;
   flex-shrink: 0;
-  width: 60%;
-  display: block;
-}
-.roomPhoto {
-  width: 100%;
-  display: block;
+
   border: 5px solid;
+}
+
+.roomPhotos img {
+  width: 40rem;
+  height: auto;
+  display: block;
 }
 .roomDescription {
   display: flex;
@@ -77,64 +85,180 @@ article {
   .roomArticle {
     margin: 2rem 10%;
   }
+  .roomPhotos {
+    width: 60%;
+    border: 0.3rem solid;
+  }
 }
 
 @media (max-width: 1160px) {
-  .roomArticle {
-    margin: 2rem 5%;
+  main {
+    margin: 0 5%;
   }
-  .roomPhotos {
-    width: 50%;
-  }
-  .roomPhoto {
-    border: 4px solid;
+  article {
+    margin-bottom: 4.5rem;
   }
 }
 
 @media (orientation: portrait) or (max-width: 900px) {
+  main {
+    margin: 0 5%;
+  }
   .roomArticle {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 1.5rem 5%;
+    margin: 1.5rem 0;
   }
   .roomPhotos {
     width: 80%;
+    border: 4px solid;
   }
   .roomDescription {
-    width: 90%;
-  }
-  .roomPhoto {
-    border: 4px solid;
+    width: 70%;
   }
 }
 
 @media (max-width: 650px) {
+  main {
+    margin: 0 5%;
+  }
   .roomArticle {
-    margin: 1rem 5%;
+    margin: 2rem 0;
   }
   .roomPhotos {
-    width: 100%;
+    width: 90%;
+    border: 3px solid;
   }
   .roomDescription {
-    width: 100%;
-  }
-  .roomPhoto {
-    border: 3px solid;
+    width: 90%;
   }
 }
 
 @media (max-width: 400px) {
+  main {
+    margin: 0 5%;
+  }
   .roomArticle {
-    margin: 1rem 3%;
+    margin: 1rem 0;
   }
   .roomPhotos {
-    width: 100%;
-  }
-  .roomDescription {
-    width: 100%;
-  }
-  .roomPhoto {
+    width: 96%;
+
     border: 2px solid;
   }
+  .roomDescription {
+    width: 90%;
+  }
+}
+
+.roomPhotos {
+  position: relative;
+  overflow: hidden;
+}
+
+.roomPhotosSlides {
+  width: 500%;
+  height: 100%;
+  display: flex;
+}
+.roomPhotosSlides input {
+  display: none;
+}
+/*css for manual navigation*/
+.sliderManual {
+  position: absolute;
+  margin-top: 23rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.manualButton {
+  border: 2px solid black;
+
+  padding: 5px;
+  border-radius: 1rem;
+
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manualButton:hover {
+  background: black;
+}
+
+#Lux1:checked ~ .mainPhoto {
+  margin-left: 0;
+}
+#Lux1:checked ~ .sliderManual #labelLux1,
+#Lux2:checked ~ .sliderManual #labelLux2,
+#Lux3:checked ~ .sliderManual #labelLux3,
+#Lux4:checked ~ .sliderManual #labelLux4,
+#Lux5:checked ~ .sliderManual #labelLux5 {
+  background: var(--highlight);
+}
+#Lux2:checked ~ .mainPhoto {
+  margin-left: -40rem;
+}
+
+#Lux3:checked ~ .mainPhoto {
+  margin-left: -80rem;
+}
+
+#Lux4:checked ~ .mainPhoto {
+  margin-left: -120rem;
+}
+
+#Lux5:checked ~ .mainPhoto {
+  margin-right: -160rem;
+}
+
+.leftScroll,
+.rightScroll {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 35%;
+  width: 15%;
+  height: 30%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftScroll {
+  left: -1rem;
+  border-radius: 0 10% 10% 0;
+}
+
+.rightScroll {
+  right: -1rem;
+  border-radius: 10% 0 0 10%;
+}
+
+.arrowLeft {
+  margin: 0;
+  width: 50%;
+  height: 50%;
+  clip-path: polygon(100% 0%, 100% 100%, 0% 50%);
+  background-color: white;
+}
+.arrowRight {
+  margin: 0;
+  width: 50%;
+  height: 50%;
+  clip-path: polygon(0% 0%, 0% 100%, 100% 50%);
+
+  background-color: white;
+}
+
+.unfading {
+  opacity: 70%;
+  visibility: hidden;
+}
+.roomPhotos:hover .unfading {
+  visibility: visible;
+  transition: 1s;
 }

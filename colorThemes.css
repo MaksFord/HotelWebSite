@@ -1,12 +1,12 @@
 :root {
   --primary: #8b0000;
   --button: #6e0707;
-  --secondary: #f1afaf;
+  --secondary: #fac5c5;
   --accent: #ffffff;
-  --main: white;
+  --main: #ffe4e0;
   --text: #000000;
   --h3: #170714;
-  --article: #f5f5f5;
+  --article: white;
   --highlight: #ffd700;
   --text: black;
 }
@@ -14,7 +14,7 @@
   --primary: #2a019c;
   --button: #1d0365;
 
-  --secondary: #191919;
+  --secondary: #090028;
   --accent: #ffffff;
   --main: #0f0d7a;
   --h3: #94fff8;
@@ -87,6 +87,12 @@ mark {
 .linkedP:hover {
   background-color: var(--highlight);
   color: var(--accent);
+}
+.imageContainer {
+  border-color: var(--highlight);
+}
+.roomPhotos {
+  border-color: var(--highlight);
 }
 
 .bookRoomMini {

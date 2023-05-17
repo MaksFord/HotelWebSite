@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="Styles.css" />
-    <link rel="stylesheet" href="colorThemes.css" />
+
     <link rel="stylesheet" href="rooms.css" />
+    <link rel="stylesheet" href="colorThemes.css" />
     <script src="script.js" defer></script>
     <title>Hotel_Celinnaya_rooms</title>
   </head>
@@ -228,15 +229,45 @@
       </div>
       <article class="roomArticle" id="lux">
         <div class="roomPhotos">
-          <picture class="roomPhoto">
-            <img src="Rooms/Lux/_055.jpg" alt="Lux" />
-          </picture>
+          <div class="roomPhotosSlides">
+            <input type="radio" name="radioButton" id="Lux1" />
+            <input type="radio" name="radioButton" id="Lux2" />
+            <input type="radio" name="radioButton" id="Lux3" />
+            <input type="radio" name="radioButton" id="Lux4" />
+            <input type="radio" name="radioButton" id="Lux5" />
+            <picture class="roomPhoto mainPhoto">
+              <img src="Rooms/Lux/Lux1.jpg" alt="Lux" />
+            </picture>
+            <picture class="roomPhoto">
+              <img src="Rooms/Lux/Lux2.jpg" alt="Lux" />
+            </picture>
+            <picture class="roomPhoto">
+              <img src="Rooms/Lux/Lux3.jpg" alt="Lux" />
+            </picture>
+            <picture class="roomPhoto">
+              <img src="Rooms/Lux/Lux4.jpg" alt="Lux" />
+            </picture>
+            <picture class="roomPhoto">
+              <img src="Rooms/Lux/Lux5.jpg" alt="Lux" />
+            </picture>
+            <div class="sliderManual unfading">
+              <label for="Lux1" id="labelLux1" class="manualButton"></label>
+              <label for="Lux2" id="labelLux2" class="manualButton"></label>
+              <label for="Lux3" id="labelLux3" class="manualButton"></label>
+              <label for="Lux4" id="labelLux4" class="manualButton"></label>
+              <label for="Lux5" id="labelLux5" class="manualButton"></label>
+            </div>
+
+            <figure class="leftScroll unfading" id="luxLeft"><figure class="arrowLeft"></figure></figure>
+            <figure class="rightScroll unfading" id="luxRight"><figure class="arrowRight"></figure></figure>
+          </div>
         </div>
         <div class="roomDescription">
           <p lang="ru" class="infoDescription">
             <mark>Стоимость:</mark> 19000-22500 тенге (сутки)<br />
             15000 тенге (полсуток)<br /><br />
-            <mark>Описание:</mark> двухкомнатный номер для одного-двух человек, большая кровать, диван. <br />
+            <mark>Описание:</mark> двухкомнатный номер или большая студия для одного-двух человек, большая кровать,
+            диван. <br />
             Площадь номера 37.8кв.м. <br /><br />
             <mark>Дополнительно:</mark> телефон, холодильник, кабельное телевидение, кондиционер, фен, электрочайник,
             Wi-Fi, круглосуточная парковка.
@@ -416,7 +447,7 @@
       </article>
 
       <div id="econom3Header">
-        <h3 lang="ru">Эконом</h3>
+        <h3 lang="ru">Эконом трёхместный</h3>
         <h3 lang="en">Low Cost</h3>
         <h3 lang="kz">Жартылай люкс</h3>
       </div>
