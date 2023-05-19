@@ -112,8 +112,25 @@ themeSwitcher.addEventListener("click", () => {
   localStorage.setItem("theme", currentTheme);
 });
 
-document.getElementById("luxLeft").addEventListener("click", () => switchPhotoLeft("radioButton"));
-document.getElementById("luxRight").addEventListener("click", () => switchPhotoRight("radioButton"));
+//arrows for photo sliders;
+
+document.getElementById("luxLeft").addEventListener("click", () => switchPhotoLeft("radioButtonLux"));
+document.getElementById("luxRight").addEventListener("click", () => switchPhotoRight("radioButtonLux"));
+
+document.getElementById("semiPlusLeft").addEventListener("click", () => switchPhotoLeft("radioButtonsemiPlus"));
+document.getElementById("semiPlusRight").addEventListener("click", () => switchPhotoRight("radioButtonsemiPlus"));
+
+document.getElementById("semiLuxLeft").addEventListener("click", () => switchPhotoLeft("radioButtonsemiLux"));
+document.getElementById("semiLuxRight").addEventListener("click", () => switchPhotoRight("radioButtonsemiLux"));
+
+document.getElementById("stDuoLeft").addEventListener("click", () => switchPhotoLeft("radioButtonstDuo"));
+document.getElementById("stDuoRight").addEventListener("click", () => switchPhotoRight("radioButtonstDuo"));
+
+document.getElementById("standartLeft").addEventListener("click", () => switchPhotoLeft("radioButtonStandart"));
+document.getElementById("standartRight").addEventListener("click", () => switchPhotoRight("radioButtonStandart"));
+
+document.getElementById("economLeft").addEventListener("click", () => switchPhotoLeft("radioButtonEconom"));
+document.getElementById("economRight").addEventListener("click", () => switchPhotoRight("radioButtonEconom"));
 
 //function for buttons
 function switchPhotoRight(elementName) {

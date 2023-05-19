@@ -2,6 +2,9 @@ html {
   --photo: 40rem;
   --photoH: 27rem;
 }
+.introArticle {
+  margin: 0;
+}
 .roomPreview {
   list-style: none;
   display: flex;
@@ -9,7 +12,6 @@ html {
   justify-content: start;
   align-items: center;
   font-size: 1.5rem;
-
   width: 10rem;
   padding: 1rem;
   border-radius: 2rem;
@@ -25,8 +27,11 @@ html {
   width: 100%;
   height: auto;
   border-radius: 0.5rem;
+  border: 1px solid var(--border);
 }
 #roomsList {
+  margin: 0;
+  padding: 1rem;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -87,13 +92,268 @@ article {
   align-self: center;
   font-size: 1rem;
 }
+/*slider*/
+.roomPhotos {
+  position: relative;
+  overflow: hidden;
+}
 
-@media (min-width: 1700px) {
+.roomPhotosSlides {
+  width: 500%;
+  height: 100%;
+  display: flex;
+}
+.roomPhotosSlides input {
+  display: none;
+}
+/*css for manual navigation*/
+.sliderManual {
+  position: absolute;
+  margin-top: calc(var(--photoH) * 0.85);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.manualButton {
+  border: 2px solid black;
+
+  padding: 0.4rem;
+  border-radius: 1rem;
+
+  cursor: pointer;
+  transition: 1s;
+}
+
+#Lux1:checked ~ .mainPhoto {
+  margin-left: 0;
+}
+#Lux1:checked ~ .sliderManual #labelLux1,
+#Lux2:checked ~ .sliderManual #labelLux2,
+#Lux3:checked ~ .sliderManual #labelLux3,
+#Lux4:checked ~ .sliderManual #labelLux4,
+#Lux5:checked ~ .sliderManual #labelLux5 {
+  background: var(--border);
+}
+#Lux2:checked ~ .mainPhoto {
+  margin-left: calc((var(--photo) * -1));
+}
+
+#Lux3:checked ~ .mainPhoto {
+  margin-left: calc((var(--photo) * -2));
+}
+
+#Lux4:checked ~ .mainPhoto {
+  margin-left: calc((var(--photo) * -3));
+}
+
+#Lux5:checked ~ .mainPhoto {
+  margin-right: calc((var(--photo) * -4));
+}
+.manualButton:hover {
+  background: var(--highlight);
+}
+
+/*semilux+*/
+#semiPlus1:checked ~ .mainPhotosemiPlus {
+  margin-left: 0;
+}
+#semiPlus2:checked ~ .mainPhotosemiPlus {
+  margin-left: calc((var(--photo) * -1));
+}
+
+#semiPlus3:checked ~ .mainPhotosemiPlus {
+  margin-left: calc((var(--photo) * -2));
+}
+
+#semiPlus4:checked ~ .mainPhotosemiPlus {
+  margin-left: calc((var(--photo) * -3));
+}
+
+#semiPlus5:checked ~ .mainPhotosemiPlus {
+  margin-right: calc((var(--photo) * -4));
+}
+#semiPlus1:checked ~ .sliderManual #labelsemiPlus1,
+#semiPlus2:checked ~ .sliderManual #labelsemiPlus2,
+#semiPlus3:checked ~ .sliderManual #labelsemiPlus3,
+#semiPlus4:checked ~ .sliderManual #labelsemiPlus4,
+#semiPlus5:checked ~ .sliderManual #labelsemiPlus5 {
+  background: var(--border);
+}
+/*semilux*/
+#semiLux1:checked ~ .mainPhotosemiLux {
+  margin-left: 0;
+}
+#semiLux2:checked ~ .mainPhotosemiLux {
+  margin-left: calc((var(--photo) * -1));
+}
+
+#semiLux3:checked ~ .mainPhotosemiLux {
+  margin-left: calc((var(--photo) * -2));
+}
+
+#semiLux4:checked ~ .mainPhotosemiLux {
+  margin-left: calc((var(--photo) * -3));
+}
+
+#semiLux5:checked ~ .mainPhotosemiLux {
+  margin-right: calc((var(--photo) * -4));
+}
+#semiLux1:checked ~ .sliderManual #labelsemiLux1,
+#semiLux2:checked ~ .sliderManual #labelsemiLux2,
+#semiLux3:checked ~ .sliderManual #labelsemiLux3,
+#semiLux4:checked ~ .sliderManual #labelsemiLux4,
+#semiLux5:checked ~ .sliderManual #labelsemiLux5 {
+  background: var(--border);
+}
+
+/*standart Double*/
+#stDuo1:checked ~ .stDuoMainPhoto {
+  margin-left: 0;
+}
+#stDuo2:checked ~ .stDuoMainPhoto {
+  margin-left: calc((var(--photo) * -1));
+}
+
+#stDuo3:checked ~ .stDuoMainPhoto {
+  margin-left: calc((var(--photo) * -2));
+}
+
+#stDuo4:checked ~ .stDuoMainPhoto {
+  margin-left: calc((var(--photo) * -3));
+}
+
+#stDuo5:checked ~ .stDuoMainPhoto {
+  margin-right: calc((var(--photo) * -4));
+}
+#stDuo1:checked ~ .sliderManual #labelstDuo1,
+#stDuo2:checked ~ .sliderManual #labelstDuo2,
+#stDuo3:checked ~ .sliderManual #labelstDuo3,
+#stDuo4:checked ~ .sliderManual #labelstDuo4,
+#stDuo5:checked ~ .sliderManual #labelstDuo5 {
+  background: var(--border);
+}
+
+/*standart solo*/
+#Standart1:checked ~ .mainPhotoStandart {
+  margin-left: 0;
+}
+#Standart2:checked ~ .mainPhotoStandart {
+  margin-left: calc((var(--photo) * -1));
+}
+
+#Standart3:checked ~ .stDuoMainPhotoStandart {
+  margin-left: calc((var(--photo) * -2));
+}
+
+#Standart4:checked ~ .mainPhotoStandart {
+  margin-left: calc((var(--photo) * -3));
+}
+
+#Standart5:checked ~ .mainPhotoStandart {
+  margin-right: calc((var(--photo) * -4));
+}
+#Standart1:checked ~ .sliderManual #labelStandart1,
+#Standart2:checked ~ .sliderManual #labelStandart2,
+#Standart3:checked ~ .sliderManual #labelStandart3,
+#Standart4:checked ~ .sliderManual #labelStandart4,
+#Standart5:checked ~ .sliderManual #labelStandart5 {
+  background: var(--border);
+}
+
+/*econom*/
+#Econom1:checked ~ .mainPhotoEconom {
+  margin-left: 0;
+}
+#Econom2:checked ~ .mainPhotoEconom {
+  margin-left: calc((var(--photo) * -1));
+}
+
+#Econom3:checked ~ .mainPhotoEconom {
+  margin-left: calc((var(--photo) * -2));
+}
+
+#Econom4:checked ~ .mainPhotoEconom {
+  margin-left: calc((var(--photo) * -3));
+}
+
+#Econom5:checked ~ .mainPhotoEconom {
+  margin-right: calc((var(--photo) * -4));
+}
+#Econom1:checked ~ .sliderManual #labelEconom1,
+#Econom2:checked ~ .sliderManual #labelEconom2,
+#Econom3:checked ~ .sliderManual #labelEconom3,
+#Econom4:checked ~ .sliderManual #labelEconom4,
+#Econom5:checked ~ .sliderManual #labelEconom5 {
+  background: var(--border);
+}
+
+.manualButton:hover {
+  background: var(--highlight);
+}
+
+/*control elements of photo slider */
+.leftScroll,
+.rightScroll {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 35%;
+  width: 15%;
+  height: 25%;
+  background-color: black;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftScroll {
+  left: -1rem;
+  border-radius: 0 10% 10% 0;
+}
+
+.rightScroll {
+  right: -1rem;
+  border-radius: 10% 0 0 10%;
+}
+
+.arrowLeft {
+  margin: 0;
+  width: 50%;
+  height: 50%;
+  clip-path: polygon(100% 0%, 100% 100%, 0% 50%);
+  background-color: white;
+}
+.arrowRight {
+  margin: 0;
+  width: 50%;
+  height: 50%;
+  clip-path: polygon(0% 0%, 0% 100%, 100% 50%);
+
+  background-color: white;
+}
+
+.unfading {
+  opacity: 70%;
+  visibility: hidden;
+}
+.roomPhotos:hover .unfading {
+  visibility: visible;
+  transition: 1s;
+}
+
+/*media queries*/
+
+@media (min-width: 1400px) {
+  html {
+    --photo: 40rem;
+    --photoH: 27rem;
+  }
   .roomArticle {
-    margin: 2rem 10%;
+    margin: 2rem 5%;
   }
   .roomPhotos {
-    width: 60%;
     border: 0.3rem solid;
   }
 }
@@ -136,6 +396,13 @@ article {
   .roomDescription {
     width: 80%;
   }
+  .leftScroll {
+    left: -0.8rem;
+  }
+
+  .rightScroll {
+    right: -0.8rem;
+  }
 }
 
 @media (max-width: 650px) {
@@ -155,6 +422,13 @@ article {
   .roomDescription {
     width: 90%;
   }
+  .leftScroll {
+    left: -0.6rem;
+  }
+
+  .rightScroll {
+    right: -0.6rem;
+  }
 }
 @media (max-width: 560px) {
   html {
@@ -166,6 +440,13 @@ article {
   html {
     --photo: 20rem;
     --photoH: 13rem;
+  }
+  .leftScroll {
+    left: -0.5rem;
+  }
+
+  .rightScroll {
+    right: -0.5rem;
   }
 }
 @media (max-width: 400px) {
@@ -191,116 +472,11 @@ article {
     --photo: 16rem;
     --photoH: 10.4rem;
   }
-}
+  .leftScroll {
+    left: -0.4rem;
+  }
 
-.roomPhotos {
-  position: relative;
-  overflow: hidden;
-}
-
-.roomPhotosSlides {
-  width: 500%;
-  height: 100%;
-  display: flex;
-}
-.roomPhotosSlides input {
-  display: none;
-}
-/*css for manual navigation*/
-.sliderManual {
-  position: absolute;
-  margin-top: calc(var(--photoH) * 0.85);
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-.manualButton {
-  border: 2px solid black;
-
-  padding: 5px;
-  border-radius: 1rem;
-
-  cursor: pointer;
-  transition: 1s;
-}
-
-.manualButton:hover {
-  background: black;
-}
-
-#Lux1:checked ~ .mainPhoto {
-  margin-left: 0;
-}
-#Lux1:checked ~ .sliderManual #labelLux1,
-#Lux2:checked ~ .sliderManual #labelLux2,
-#Lux3:checked ~ .sliderManual #labelLux3,
-#Lux4:checked ~ .sliderManual #labelLux4,
-#Lux5:checked ~ .sliderManual #labelLux5 {
-  background: var(--highlight);
-}
-#Lux2:checked ~ .mainPhoto {
-  margin-left: calc((var(--photo) * -1));
-}
-
-#Lux3:checked ~ .mainPhoto {
-  margin-left: calc((var(--photo) * -2));
-}
-
-#Lux4:checked ~ .mainPhoto {
-  margin-left: calc((var(--photo) * -3));
-}
-
-#Lux5:checked ~ .mainPhoto {
-  margin-right: calc((var(--photo) * -4));
-}
-
-.leftScroll,
-.rightScroll {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  top: 35%;
-  width: 15%;
-  height: 25%;
-  background-color: black;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.leftScroll {
-  left: 0;
-  border-radius: 0 10% 10% 0;
-}
-
-.rightScroll {
-  right: 0;
-  border-radius: 10% 0 0 10%;
-}
-
-.arrowLeft {
-  margin: 0;
-  width: 50%;
-  height: 50%;
-  clip-path: polygon(100% 0%, 100% 100%, 0% 50%);
-  background-color: white;
-}
-.arrowRight {
-  margin: 0;
-  width: 50%;
-  height: 50%;
-  clip-path: polygon(0% 0%, 0% 100%, 100% 50%);
-
-  background-color: white;
-}
-
-.unfading {
-  opacity: 70%;
-  visibility: hidden;
-}
-.roomPhotos:hover .unfading {
-  visibility: visible;
-  transition: 1s;
+  .rightScroll {
+    right: -0.4rem;
+  }
 }
