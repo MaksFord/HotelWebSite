@@ -106,3 +106,14 @@ mark {
 .roomPreview > i {
   color: var(--text);
 }
+
+.phoneLinkText {
+  color: var(--text);
+}
+.phoneLinkText > .emoji {
+  color: transparent;
+  text-shadow: 0 0 0 var(--highlight);
+}
+.compass {
+  color: red;
+}

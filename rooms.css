@@ -242,7 +242,7 @@ article {
   margin-left: calc((var(--photo) * -1));
 }
 
-#Standart3:checked ~ .stDuoMainPhotoStandart {
+#Standart3:checked ~ .mainPhotoStandart {
   margin-left: calc((var(--photo) * -2));
 }
 
