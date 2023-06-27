@@ -4,6 +4,9 @@ html {
 }
 .introArticle {
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .roomPreview {
   list-style: none;
@@ -13,6 +16,7 @@ html {
   align-items: center;
   font-size: 1.5rem;
   width: 10rem;
+  max-width: 255px;
   padding: 1rem;
   border-radius: 2rem;
 }
@@ -36,6 +40,11 @@ html {
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
+}
+@media (min-width: 900px) and (max-width: 2500px) {
+  #roomsList {
+    width: 46rem;
+  }
 }
 
 mark {
@@ -86,7 +95,7 @@ article {
   margin-top: 0;
 }
 .bookRoomMini {
-  padding: 1rem;
+  padding: 1rem 3rem 1rem 2rem;
   border: 2px solid;
   border-radius: 1rem;
   align-self: center;
@@ -479,4 +488,60 @@ article {
   .rightScroll {
     right: -0.4rem;
   }
+}
+
+h3 {
+  color: var(--border);
+}
+
+.keyEmoji {
+  color: transparent;
+  text-shadow: 0 0 0 var(--highlight);
+}
+
+.bookRoomMini i {
+  position: relative;
+  overflow: hidden;
+}
+.bookRoomMini i::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.1rem;
+  bottom: -0.2rem; /* Adjust the position as needed */
+  left: 0;
+  background-color: var(--highlight);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 1s ease;
+}
+.bookRoomMini i::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.1rem;
+  top: -0.1rem; /* Adjust the position as needed */
+  right: 0;
+  background-color: var(--highlight);
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 1s ease;
+}
+
+.bookRoomMini:hover i::before,
+.bookRoomMini:hover i::after {
+  transform: scaleX(1);
+  background-color: var(--button);
+  transition: 1s;
+}
+.bookRoomMini:hover {
+  cursor: pointer;
+  background-color: var(--highlight);
+  color: var(--button);
+  border-color: var(--button);
+  transition: 1s;
+}
+.bookRoomMini:hover .keyEmoji {
+  text-shadow: 0 0 0 var(--button);
+  transition: 1s;
 }

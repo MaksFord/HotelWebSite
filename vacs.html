@@ -5,215 +5,237 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="Styles.css" />
+    <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="colorThemes.css" />
     <script src="script.js" defer></script>
-    <title>Hotel_Celinnaya_vacancies</title>
+    <title>Hotel_Celinnaya</title>
   </head>
   <body>
     <!--Header   -->
 
     <nav class="header">
-      <div id="mainLogo">
-        <img src="SitePics/mainLogo.svg" alt="CelinnayaLogo" />
+        <div id="mainLogo">
+          <img id="mainLogoImage" src="SitePics/logo.png" alt="CelinnayaLogo" />
+        </div>
+        <div id="headerName">
+          <i lang="ru">Гостиница "Целинная"</i>
+          <i lang="en">Hotel "Celinnaya"</i>
+          <i lang="kz">Селіндік қонақ үйі</i>
+        </div>
+        <div id="headerInfo">
+          <i lang="ru"
+            ><span class="mapLink"
+              ><span class="compass">&#129517;</span>Республика Казахстан<br />г. Костанай,
+              <span class="avoidWrap">ул. Батурсынова, 95</span></span
+            ><br /><a href="tel:+77076343424"><span class="emoji">&#128222;</span>+7 (707) 634 34 24</a><br />
+            <a href="tel:+77142544366"><span class="emoji">&#128222;</span>+7 (7142) 54 43 66</a></i
+          >
+          <i lang="en"
+            >The Republic of Kazakhstan<br />Kostanay, <span class="avoidWrap">Baytursynov Street 95</span><br /><a
+              href="tel:+77076343424"
+              ><span class="emoji">&#128222;</span>+7 (707) 634 34 24</a
+            ><br />
+            <a href="tel:+77142544366"><span class="emoji">&#128222;</span>+7 (7142) 54 43 66</a></i
+          >
+          <i lang="kz"
+            >Қазақстан Республикасы<br />Қостанай,<span class="avoidWrap">Байтұрсынұлы к-сі, 95</span><br /><a
+              href="tel:+77076343424"
+              ><span class="emoji">&#128222;</span>+7 (707) 634 34 24</a
+            ><br />
+            <a href="tel:+77142544366"><span class="emoji">&#128222;</span>+7 (7142) 54 43 66</a></i
+          >
+        </div>
+        <div id="socials_Lang">
+          <div id="socials">
+            <button class="buttonSocial" id="whatsapp">
+              <img src="SitePics/whatsapp.svg" alt="whatsapp" />
+            </button>
+            <button class="buttonSocial" id="facebook">
+              <img src="SitePics/facebook.svg" alt="facebook" />
+            </button>
+            <button class="buttonSocial" id="instagram">
+              <img src="SitePics/instagram.svg" alt="instagram" />
+            </button>
+            <button class="buttonSocial" id="vk">
+              <img src="SitePics/vk.svg" alt="vk" />
+            </button>
+            <button class="buttonSocial" id="ok">
+              <img src="SitePics/ok-ru.svg" alt="ok" />
+            </button>
+          </div>
+          <div class="divider"></div>
+          <div id="language">
+            <button id="themeSwitcher"><img src="SitePics/theme.svg" alt="switchColorTheme" /></button>
+            <button id="ruLang" class="buttonLang" lang="ru"><img src="SitePics/ru.svg" alt="ru" /></button>
+            <button id="enLang" class="buttonLang" lang="en"><img src="sitePics/gb.svg" alt="en" /></button>
+            <button id="kzLang" class="buttonLang" lang="kz"><img src="sitePics/kz.svg" alt="kz" /></button>
+          </div>
+        </div>
+      </nav>
+  
+      <!--Book Room element and navMenu-->
+  
+      <div id="bookRoomContainer" class="bookRoomLink">
+        <span class="keyEmoji">&#128273</span>
+        <i class="bookRoom" lang="ru">Забронировать номер</i>
+        <i class="bookRoom" lang="en">Book your Room</i>
+        <i class="bookRoom" lang="kz">Нөмірді брондау</i>
       </div>
-      <div id="headerName">
-        <i lang="ru">Гостиница "Целинная"</i>
-        <i lang="en">Hotel "Celinnaya"</i>
-        <i lang="kz">Селіндік қонақ үйі</i>
-      </div>
-      <div id="headerInfo">
-        <i lang="ru"
-          ><span class="mapLink"
-            ><span class="compass">&#129517;</span>Республика Казахстан<br />г. Костанай,
-            <span class="avoidWrap">ул. Батурсынова, 95</span></span
-          ><br /><a href="tel:+77076343424"><span class="emoji">&#128222;</span>+7 (707) 634 34 24</a><br />
-          <a href="tel:+77142544366"><span class="emoji">&#128222;</span>+7 (7142) 54 43 66</a></i
-        >
-        <i lang="en"
-          >The Republic of Kazakhstan<br />Kostanay, <span class="avoidWrap">Baytursynov Street 95</span><br /><a
-            href="tel:+77076343424"
-            ><span class="emoji">&#128222;</span>+7 (707) 634 34 24</a
-          ><br />
-          <a href="tel:+77142544366"><span class="emoji">&#128222;</span>+7 (7142) 54 43 66</a></i
-        >
-        <i lang="kz"
-          >Қазақстан Республикасы<br />Қостанай,<span class="avoidWrap">Байтұрсынұлы к-сі, 95</span><br /><a
-            href="tel:+77076343424"
-            ><span class="emoji">&#128222;</span>+7 (707) 634 34 24</a
-          ><br />
-          <a href="tel:+77142544366"><span class="emoji">&#128222;</span>+7 (7142) 54 43 66</a></i
-        >
-      </div>
-      <div id="socials_Lang">
-        <div id="socials">
-          <button class="buttonSocial" id="whatsapp">
-            <img src="SitePics/whatsapp.svg" alt="whatsapp" />
-          </button>
-          <button class="buttonSocial" id="facebook">
-            <img src="SitePics/facebook.svg" alt="facebook" />
-          </button>
-          <button class="buttonSocial" id="instagram">
-            <img src="SitePics/instagram.svg" alt="instagram" />
-          </button>
-          <button class="buttonSocial" id="vk">
-            <img src="SitePics/vk.svg" alt="vk" />
-          </button>
-          <button class="buttonSocial" id="ok">
-            <img src="SitePics/ok-ru.svg" alt="ok" />
-          </button>
-        </div>
-        <div class="divider"></div>
-        <div id="language">
-          <button id="themeSwitcher"><img src="SitePics/theme.svg" alt="switchColorTheme" /></button>
-          <button id="ruLang" class="buttonLang" lang="ru"><img src="SitePics/ru.svg" alt="ru" /></button>
-          <button id="enLang" class="buttonLang" lang="en"><img src="sitePics/gb.svg" alt="en" /></button>
-          <button id="kzLang" class="buttonLang" lang="kz"><img src="sitePics/kz.svg" alt="kz" /></button>
-        </div>
-      </div>
-    </nav>
-
-    <!--Book Room element and navMenu-->
-
-    <div id="bookRoomContainer">
-      <i class="bookRoom" lang="ru">Забронировать номер</i>
-      <i class="bookRoom" lang="en">Book your Room</i>
-      <i class="bookRoom" lang="kz">Нөмірді брондау</i>
-    </div>
-    <nav id="navbar">
-      <div id="navMenuContainer">
-        <div class="navMenu main" id="main">
-          <i lang="ru">Главная</i>
-          <i lang="en">Main page</i>
-          <i lang="kz">Главная</i>
-        </div>
-        <div class="navMenu rooms" id="rooms">
-          <i lang="ru">Номера</i>
-          <i lang="en">Rooms</i>
-          <i lang="kz">Бөлмелер</i>
-        </div>
-        <div class="navMenu service" id="service">
-          <i lang="ru">Услуги</i>
-          <i lang="en">Services</i>
-          <i lang="kz">Қызметтер</i>
-        </div>
-        <div class="navMenu vacancies" id="vacancies">
-          <i lang="ru">Вакансии</i>
-          <i lang="en">Vacancies</i>
-          <i lang="kz">Бос жұмыс орындары</i>
-        </div>
-
-        <div class="navMenu about" id="about">
-          <i lang="ru">Как добраться</i>
-          <i lang="en">Find Us</i>
-          <i lang="kz">Біз туралы</i>
-        </div>
-      </div>
-    </nav>
-
-    <!--Main page starting here-->
-
-    <article>
-      <h3 lang="ru">Вакансии</h3>
-      <h3 lang="en">Vacancies</h3>
-      <h3 lang="kz">Селіндік қонақ үйі</h3>
-      <p lang="ru">
-        Мы постоянно ищем талантливых и энергичных людей, чтобы расширить нашу команду. Если вы хотите присоединиться к
-        нам и работать в приятной атмосфере с профессионалами своего дела, свяжитесь с нами по телефону или отправьте
-        свое резюме на электронную почту. Мы будем рады рассмотреть вашу кандидатуру.
-      </p>
-      <p lang="en">Welcome to "Tselinnaya" Hotel - your home away from home in the heart of Kostanay city.</p>
-    </article>
-
-    <!--footer-->
-
-    <nav class="footer">
-      <div id="footerElements">
-        <div id="bottomLogo">
-          <img id="mainLogoBottom" src="SitePics/mainLogo.svg" />
-        </div>
-
-        <ul id="bottomLinks">
-          <i class="bottomTitle" lang="ru">Карта сайта</i>
-          <i class="bottomTitle" lang="en">Sitemap</i>
-          <i class="bottomTitle" lang="kz">Cайт картасы</i>
-          <li class="bottomLink main">
+      <nav id="navbar">
+        <div id="navMenuContainer">
+          <div class="navMenu main" id="main">
             <i lang="ru">Главная</i>
             <i lang="en">Main page</i>
             <i lang="kz">Главная</i>
-          </li>
-          <li class="bottomLink rooms">
+          </div>
+          <div class="navMenu rooms" id="rooms">
             <i lang="ru">Номера</i>
             <i lang="en">Rooms</i>
             <i lang="kz">Бөлмелер</i>
-          </li>
-          <li class="bottomLink service">
+          </div>
+          
+          <div class="navMenu service" id="service">
             <i lang="ru">Услуги</i>
             <i lang="en">Services</i>
             <i lang="kz">Қызметтер</i>
-          </li>
-          <li class="bottomLink vacancies">
-            <i lang="ru">Вакансии</i>
-            <i lang="en">Vacancies</i>
+          </div>
+  
+          <div class="navMenu food" id="food">
+            <i lang="ru">Питание</i>
+            <i lang="en">Food</i>
             <i lang="kz">Бос жұмыс орындары</i>
-          </li>
-          <li class="bottomLink about">
+          </div>
+  
+  
+          <div class="navMenu about" id="about">
             <i lang="ru">Как добраться</i>
             <i lang="en">Find Us</i>
             <i lang="kz">Біз туралы</i>
-          </li>
-        </ul>
+          </div>
+        </div>
+      </nav>
+  
+      <!--Main page starting here-->
+      <main>
 
-        <ul id="contactUs">
-          <i class="bottomTitle" lang="ru">Связаться с нами</i>
-          <i class="bottomTitle" lang="en">Contact Us</i>
-          <i class="bottomTitle" lang="kz">Селіндік қонақ үйі</i>
-          <li class="contactUsBottom">
-            <a href="whatsapp://send?phone=77076343424">
-              <span><img class="emojiImages" src="SitePics/instagram.svg" /></span> Whatsapp</a
-            >
-          </li>
-          <li class="contactUsBottom">
-            <a href="mailto:celinnaya@mail.ru"><span>&#128231;</span>celinnaya@mail.ru</a>
-          </li>
-          <li class="contactUsBottom">
-            <a href="mailto:gcelinnaya@gmail.com"><span>&#128231;</span>gcelinnaya@gmail.com</a>
-          </li>
-          <li class="contactUsBottom">
-            <a href="tel:+77076343424"><span>&#128222;</span>+7 (707) 634 34 24</a>
-          </li>
-          <li class="contactUsBottom">
-            <a href="tel:+77142544366"><span>&#128222;</span>+7 (7142) 54 43 66</a>
-          </li>
-        </ul>
+      <article>
+        <h3 lang="ru">Вакансии</h3>
+        <h3 lang="en">Vacancies</h3>
+        <h3 lang="kz">Селіндік қонақ үйі</h3>
+        
+        <p>
+            Благодарим Вас за заинтересованность. Вся актуальная информация по нашим вакансиям доступна по следующим ссылкам:
 
-        <ul id="bottomSocials">
-          <i class="bottomTitle" lang="ru">Мы в соцсетях</i>
-          <i class="bottomTitle" lang="en">Our socials</i>
-          <i class="bottomTitle" lang="kz">Селіндік қонақ үйі</i>
-          <li class="contactUsBottom">
-            <a href="https://www.facebook.com/HotelCelinnaya/" target="_blank" rel="noopener"
-              ><span><img class="emojiImages" src="SitePics/facebook.svg" /></span> Facebook</a
-            >
-          </li>
-          <li class="contactUsBottom">
-            <a href="https://www.instagram.com/celinnayakostanai/" target="_blank" rel="noopener"
-              ><span><img class="emojiImages" src="SitePics/instagram.svg" /></span> Instagram</a
-            >
-          </li>
-          <li class="contactUsBottom">
-            <a href="https://vk.com/" target="_blank" rel="noopener"
-              ><span><img class="emojiImages" src="SitePics/vk.svg" /></span> VKontanke</a
-            >
-          </li>
-          <li class="contactUsBottom">
-            <a href="https://ok.ru/" target="_blank" rel="noopener"
-              ><span><img class="emojiImages" src="SitePics/ok-ru.svg" /> </span> OdnoKlassniki</a
-            >
-          </li>
-        </ul>
-      </div>
+        </p>
 
-      <div id="copyrightNotice">Hotel_Celinnaya (c) 2023</div>
-    </nav>
-  </body>
-</html>
+        <p><a class="vacLink linkedP" href="https://www.olx.kz/list/user/Bitz/
+        ">OLX</a></p>
+        <p><a class="vacLink linkedP" href="https://qyzmet.kz/%D0%B2%D0%B0%D0%BA%D0%B0%D0%BD%D1%81%D0%B8%D0%B8/%D0%93%D0%BE%D1%81%D1%82%D0%B8%D0%BD%D0%B8%D1%86%D0%B0-%D0%A6%D0%B5%D0%BB%D0%B8%D0%BD%D0%BD%D0%B0%D1%8F/%D0%9A%D0%BE%D1%81%D1%82%D0%B0%D0%BD%D0%B0%D0%B9">QYZMET.KZ</a></p>
+
+        <p lang="en">Welcome to "Tselinnaya" Hotel - your home away from home in the heart of Kostanay city.</p>
+      </article>
+
+</main>
+      <!--footer-->
+
+    <nav class="footer">
+        <div id="footerElements">
+          <div id="bottomLogo">
+            <img id="mainLogoBottom" src="SitePics/logo.png" />
+          </div>
+  
+          <ul id="bottomLinks">
+            <i class="bottomTitle" lang="ru">Карта сайта</i>
+            <i class="bottomTitle" lang="en">Sitemap</i>
+            <i class="bottomTitle" lang="kz">Cайт картасы</i>
+            <li class="bottomLink main">
+              <i lang="ru">Главная</i>
+              <i lang="en">Main page</i>
+              <i lang="kz">Главная</i>
+            </li>
+            <li class="bottomLink rooms">
+              <i lang="ru">Номера</i>
+              <i lang="en">Rooms</i>
+              <i lang="kz">Бөлмелер</i>
+            </li>
+            <li class="bottomLink bookRoomLink">
+              <i lang="ru">Бронирование номера</i>
+              <i lang="en">Room Booking</i>
+              <i lang="kz">Бөлмені брондау</i>
+            </li>
+            <li class="bottomLink service">
+              <i lang="ru">Услуги</i>
+              <i lang="en">Services</i>
+              <i lang="kz">Қызметтер</i>
+            </li>
+            <li class="bottomLink food">
+              <i lang="ru">Питание</i>
+              <i lang="en">Food</i>
+              <i lang="kz">Тамақтану</i>
+            </li>
+            <li class="bottomLink vacs">
+              <i lang="ru">Вакансии</i>
+              <i lang="en">Vacancies</i>
+              <i lang="kz">Бос жұмыс орындары</i>
+            </li>
+            <li class="bottomLink about">
+              <i lang="ru">Как добраться</i>
+              <i lang="en">Find Us</i>
+              <i lang="kz">Біз туралы</i>
+            </li>
+          </ul>
+  
+          <ul id="contactUs">
+            <i class="bottomTitle" lang="ru">Связаться с нами</i>
+            <i class="bottomTitle" lang="en">Contact Us</i>
+            <i class="bottomTitle" lang="kz">Селіндік қонақ үйі</i>
+            <li class="contactUsBottom">
+              <a href="whatsapp://send?phone=77076343424">
+                <span><img class="emojiImages" src="SitePics/whatsapp.svg" /></span> Whatsapp
+                </a>
+            </li>
+            <li class="contactUsBottom">
+              <a href="mailto:celinnaya@mail.ru"><span>&#128231;</span>celinnaya@mail.ru</a>
+            </li>
+            <li class="contactUsBottom">
+              <a href="mailto:gcelinnaya@gmail.com"><span>&#128231;</span>gcelinnaya@gmail.com</a>
+            </li>
+            <li class="contactUsBottom">
+              <a href="tel:+77076343424"><span>&#128222;</span>+7 (707) 634 34 24</a>
+            </li>
+            <li class="contactUsBottom">
+              <a href="tel:+77142544366"><span>&#128222;</span>+7 (7142) 54 43 66</a>
+            </li>
+          </ul>
+  
+          <ul id="bottomSocials">
+            <i class="bottomTitle" lang="ru">Мы в соцсетях</i>
+            <i class="bottomTitle" lang="en">Our socials</i>
+            <i class="bottomTitle" lang="kz">Селіндік қонақ үйі</i>
+            <li class="contactUsBottom">
+              <a href="https://www.facebook.com/HotelCelinnaya/" target="_blank" rel="noopener"
+                ><span><img class="emojiImages" src="SitePics/facebook.svg" /></span> Facebook</a
+              >
+            </li>
+            <li class="contactUsBottom">
+              <a href="https://www.instagram.com/celinnayakostanai/" target="_blank" rel="noopener"
+                ><span><img class="emojiImages" src="SitePics/instagram.svg" /></span> Instagram</a
+              >
+            </li>
+            <li class="contactUsBottom">
+              <a href="https://vk.com/" target="_blank" rel="noopener"
+                ><span><img class="emojiImages" src="SitePics/vk.svg" /></span> VKontanke</a
+              >
+            </li>
+            <li class="contactUsBottom">
+              <a href="https://ok.ru/" target="_blank" rel="noopener"
+                ><span><img class="emojiImages" src="SitePics/ok-ru.svg" /> </span> OdnoKlassniki</a
+              >
+            </li>
+          </ul>
+        </div>
+  
+        <div id="copyrightNotice">Hotel_Celinnaya &copy 2023</div>
+      </nav>
+    </body>
+  </html>

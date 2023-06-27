@@ -1,0 +1,81 @@
+#bookRoomForm {
+  display: flex;
+  margin: 1rem;
+  padding: 1rem;
+  flex-direction: column;
+  gap: 20px;
+}
+#bookRoomForm input {
+  width: 300px;
+}
+input[name="roomType"] {
+  display: none;
+}
+
+#roomsContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.roomTypeLabel {
+  min-width: 8rem;
+  min-height: 3rem;
+  flex: 1;
+  border: 0.25rem solid var(--border);
+  background-color: var(--border);
+  color: var(--highlight);
+}
+.roomDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.InputDiv {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+h3 {
+  text-align: center;
+}
+#stayTimeContainer {
+  margin-top: 1rem;
+  display: block;
+}
+#bookRoomForm #halfStay {
+  width: 3rem;
+}
+#halfStay:checked + #stayTimeContainer {
+  display: none;
+}
+.stars {
+  color: var(--highlight);
+}
+input[name="roomType"]:checked + label {
+  background-color: var(--highlight);
+  color: var(--border);
+}
+input[name="roomType"]:checked + label .stars {
+  color: var(--border);
+}
+input.valid {
+  border-color: rgb(62, 186, 62);
+}
+input.invalid {
+  border-color: orange;
+}
+p {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 1-px;
+  color: var(--border);
+  opacity: 0;
+  height: 0;
+}
+input.invalid + .warningDiv p {
+  opacity: 1;
+  height: auto;
+  margin-bottom: 10px;
+}

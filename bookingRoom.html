@@ -6,19 +6,393 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="Styles.css" />
 
-    <link rel="stylesheet" href="rooms.css" />
     <link rel="stylesheet" href="colorThemes.css" />
+    <link rel="stylesheet" href="bookingRoom.css" />
     <script src="script.js" defer></script>
+
     <title>Hotel_Celinnaya_rooms</title>
   </head>
+
+<!--Header   -->
+
+<nav class="header">
+  <div id="mainLogo">
+    <img id="mainLogoImage" src="SitePics/logo.png" alt="CelinnayaLogo" />
+  </div>
+  <div id="headerName">
+    <i lang="ru">Гостиница "Целинная"</i>
+    <i lang="en">Hotel "Celinnaya"</i>
+    <i lang="kz">Селіндік қонақ үйі</i>
+  </div>
+  <div id="headerInfo">
+    <i lang="ru"
+      ><span class="mapLink"
+        ><span class="compass">&#129517;</span>Республика Казахстан<br />г. Костанай,
+        <span class="avoidWrap">ул. Батурсынова, 95</span></span
+      ><br /><a href="tel:+77076343424"><span class="emoji">&#128222;</span>+7 (707) 634 34 24</a><br />
+      <a href="tel:+77142544366"><span class="emoji">&#128222;</span>+7 (7142) 54 43 66</a></i
+    >
+    <i lang="en"
+      >The Republic of Kazakhstan<br />Kostanay, <span class="avoidWrap">Baytursynov Street 95</span><br /><a
+        href="tel:+77076343424"
+        ><span class="emoji">&#128222;</span>+7 (707) 634 34 24</a
+      ><br />
+      <a href="tel:+77142544366"><span class="emoji">&#128222;</span>+7 (7142) 54 43 66</a></i
+    >
+    <i lang="kz"
+      >Қазақстан Республикасы<br />Қостанай,<span class="avoidWrap">Байтұрсынұлы к-сі, 95</span><br /><a
+        href="tel:+77076343424"
+        ><span class="emoji">&#128222;</span>+7 (707) 634 34 24</a
+      ><br />
+      <a href="tel:+77142544366"><span class="emoji">&#128222;</span>+7 (7142) 54 43 66</a></i
+    >
+  </div>
+  <div id="socials_Lang">
+    <div id="socials">
+      <button class="buttonSocial" id="whatsapp">
+        <img src="SitePics/whatsapp.svg" alt="whatsapp" />
+      </button>
+      <button class="buttonSocial" id="facebook">
+        <img src="SitePics/facebook.svg" alt="facebook" />
+      </button>
+      <button class="buttonSocial" id="instagram">
+        <img src="SitePics/instagram.svg" alt="instagram" />
+      </button>
+      <button class="buttonSocial" id="vk">
+        <img src="SitePics/vk.svg" alt="vk" />
+      </button>
+      <button class="buttonSocial" id="ok">
+        <img src="SitePics/ok-ru.svg" alt="ok" />
+      </button>
+    </div>
+    <div class="divider"></div>
+    <div id="language">
+      <button id="themeSwitcher"><img src="SitePics/theme.svg" alt="switchColorTheme" /></button>
+      <button id="ruLang" class="buttonLang" lang="ru"><img src="SitePics/ru.svg" alt="ru" /></button>
+      <button id="enLang" class="buttonLang" lang="en"><img src="sitePics/gb.svg" alt="en" /></button>
+      <button id="kzLang" class="buttonLang" lang="kz"><img src="sitePics/kz.svg" alt="kz" /></button>
+    </div>
+  </div>
+</nav>
+
+<!--Book Room element and navMenu-->
+
+<div id="bookRoomContainer" class="bookRoomLink">
+  <span class="keyEmoji">&#128273</span>
+  <i class="bookRoom" lang="ru">Забронировать номер</i>
+  <i class="bookRoom" lang="en">Book your Room</i>
+  <i class="bookRoom" lang="kz">Нөмірді брондау</i>
+</div>
+<nav id="navbar">
+  <div id="navMenuContainer">
+    <div class="navMenu main" id="main">
+      <i lang="ru">Главная</i>
+      <i lang="en">Main page</i>
+      <i lang="kz">Главная</i>
+    </div>
+    <div class="navMenu rooms" id="rooms">
+      <i lang="ru">Номера</i>
+      <i lang="en">Rooms</i>
+      <i lang="kz">Бөлмелер</i>
+    </div>
+    
+    <div class="navMenu service" id="service">
+      <i lang="ru">Услуги</i>
+      <i lang="en">Services</i>
+      <i lang="kz">Қызметтер</i>
+    </div>
+
+    <div class="navMenu food" id="food">
+      <i lang="ru">Питание</i>
+      <i lang="en">Food</i>
+      <i lang="kz">Бос жұмыс орындары</i>
+    </div>
+
+
+    <div class="navMenu about" id="about">
+      <i lang="ru">Как добраться</i>
+      <i lang="en">Find Us</i>
+      <i lang="kz">Біз туралы</i>
+    </div>
+  </div>
+</nav>
+
+
   <body>
-    <form id="bookRoomForm">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="firstname" placeholder="Your name.." />
-      <label for="email">Name</label>
-      <input type="email" name="email" />
-      <textarea id="message"> Lorem ipsum...</textarea>
+    <h3 lang="ru">Бронирование номера</h3>
+    <h3 lang="en">Room reservation</h3>
+    <h3 lang="kz">Бөлмені брондау</h3>
+    <form id="bookRoomForm" method="post" action="sendEmail.php">
+      <div class="InputDiv">
+        <div>
+          <label for="name">
+            <i lang="ru">Имя</i>
+            <i lang="en">First Name</i>
+            <i lang="kz">Аты</i>
+          </label>
+
+          <input type="text" id="name" lang="en" name="firstname" placeholder="Your name.." />
+          <div class="warningDiv">
+            <p lang="ru">Имя должно быть настоящим и содержать 2-20 символов</p>
+            <p lang="en">Name must be legit and contain 2-20 characters</p>
+            <p lang="kz">Атау нақты болуы керек және 2-20 таңбадан тұруы керек</p>
+          </div>
+        </div>
+        <div>
+          <label for="surname">
+            <i lang="ru">Фамилия</i>
+            <i lang="en">Second Name</i>
+            <i lang="kz">Тегі</i>
+          </label>
+          <input type="text" id="surname" name="secondname" placeholder="Your surname.." />
+          <div class="warningDiv">
+            <p lang="ru">Фамилия должна быть настоящей и содержать 2-20 символов</p>
+            <p lang="en">Second name must be legit and contain 2-20 characters</p>
+            <p lang="kz">Тегі шынайы болуы керек және 2-20 таңбадан тұруы керек</p>
+          </div>
+        </div>
+      </div>
+      <div class="InputDiv">
+        <div>
+          <label for="email">
+            <i lang="ru">Электронная почта</i>
+            <i lang="en">E-Mail</i>
+            <i lang="kz">Электрондық пошта</i>
+          </label>
+          <input type="email" id="email" name="email" placeholder="Your email" />
+          <div class="warningDiv">
+            <p lang="ru">Введите Вашу настоящую электронную почту, например example@mailbox.com</p>
+            <p lang="en">Enter your existing E-Mail, e.g. example@mailbox.com</p>
+            <p lang="kz">Нақты электрондық поштаңызды енгізіңіз, мысалы example@mailbox.com</p>
+          </div>
+        </div>
+        <div>
+          <label for="phoneNumber">
+            <i lang="ru">Телефон</i>
+            <i lang="en">Phone Number</i>
+            <i lang="kz">Телефон нөмірі</i>
+          </label>
+          <input type="tel" id="phoneNumber" name="tele" placeholder="Your telephone number" />
+          <div class="warningDiv">
+            <p lang="ru">Введите Ваш настоящий телефонный номер, например +7 777 888 9999 или 87778889999</p>
+            <p lang="en">Enter your existing phonenumber, e.g. +7 7778889999 or 87778889999</p>
+            <p lang="kz">Нақты телефон нөміріңізді енгізіңіз, мысалы +7 7778889999 or 87778889999</p>
+          </div>
+        </div>
+      </div>
+      <div class="InputDiv">
+        <div>
+          <label for="dateArrival">
+            <i lang="ru">Дата приезда</i>
+            <i lang="en">Arrival Date</i>
+            <i lang="kz">Келу күні</i>
+          </label>
+
+          <input type="date" id="dateArrival" name="dateArrival" min="" />
+        </div>
+        <div>
+          <label for="halfStay">
+            <i lang="ru">Заселение на полсуток</i>
+            <i lang="en">Accommodation for half a day</i>
+            <i lang="kz">Жарты күн тұру</i>
+          </label>
+          <input type="checkbox" id="halfStay" name="halfStay" value="Заселение на полсуток" />
+          <div id="stayTimeContainer">
+            <label for="stayTime">
+              <i lang="ru">Дата отъезда</i>
+              <i lang="en">Departure Date</i>
+              <i lang="kz">Кету күні</i>
+            </label>
+            <input type="date" id="dateDeparture" name="dateDeparture" min="" />
+          </div>
+        </div>
+      </div>
+
+      <div id="roomsContainer">
+        <input type="radio" name="roomType" id="lux" value="Люкс" />
+
+        <label for="lux" class="roomTypeLabel"
+          ><div class="roomDiv">
+            <i lang="ru">Люкс</i>
+            <i lang="en">Lux</i>
+            <i lang="kz">Люкс</i>
+            <i class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</i>
+          </div>
+        </label>
+
+        <input type="radio" name="roomType" id="semiPlus" value="Полуоюкс Плюс" />
+
+        <label for="semiPlus" class="roomTypeLabel"
+          ><div class="roomDiv">
+            <i lang="ru">Полулюкс Плюс</i>
+            <i lang="en">Junior Suite Plus</i>
+            <i lang="kz">Кіші люкс</i>
+            <i class="stars">&#9733;&#9733;&#9733;&#9733;</i>
+          </div>
+        </label>
+
+        <input type="radio" name="roomType" id="semiLux" value="Полулюкс" />
+
+        <label for="semiLux" class="roomTypeLabel">
+          <div class="roomDiv">
+            <i lang="ru">Полулюкс</i>
+            <i lang="en">Junior Suite</i>
+            <i lang="kz">Кіші люкс</i>
+            <i class="stars">&#9733;&#9733;&#9733;&#9733;</i>
+          </div>
+        </label>
+
+        <input type="radio" name="roomType" id="stDouble" value="Стандарт двухместный" />
+
+        <label for="stDouble" class="roomTypeLabel">
+          <div class="roomDiv">
+            <i lang="ru">Стандарт двойной</i>
+            <i lang="en">Standart Double</i>
+            <i lang="kz">Стандартты қос</i>
+            <i class="stars">&#9733;&#9733;&#9733;</i>
+          </div>
+        </label>
+
+        <input type="radio" name="roomType" id="standart" value="Стандарт" />
+
+        <label for="standart" class="roomTypeLabel">
+          <div class="roomDiv">
+            <i lang="ru">Стандарт</i>
+            <i lang="en">Standart</i>
+            <i lang="kz">Стандартты</i>
+            <i class="stars">&#9733;&#9733;&#9733;</i>
+          </div>
+        </label>
+
+        <input type="radio" name="roomType" id="econom" value="Эконом" />
+
+        <label for="econom" class="roomTypeLabel">
+          <div class="roomDiv">
+            <i lang="ru">Эконом</i>
+            <i lang="en">Low Cost</i>
+            <i lang="kz">Төмен баға</i>
+            <i class="stars">&#9733;&#9733;</i>
+          </div>
+        </label>
+      </div>
+
+      <label for="userMessage">
+        <i lang="ru">Дополнительная информация</i>
+        <i lang="en">Additional Notes</i>
+        <i lang="kz">Болу мерзімі</i>
+      </label>
+      <textarea
+        id="userMessage"
+        name="userMessage"
+        oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'
+      >
+      </textarea>
+      <!-- actually brilliant-->
+
       <button onclick="sendMail(); return false">Send</button>
     </form>
+    <script type="text/javascript" src="validation.js"></script>
+
+    <!--footer-->
+
+    <nav class="footer">
+      <div id="footerElements">
+        <div id="bottomLogo">
+          <img id="mainLogoBottom" src="SitePics/logo.png" />
+        </div>
+
+        <ul id="bottomLinks">
+          <i class="bottomTitle" lang="ru">Карта сайта</i>
+          <i class="bottomTitle" lang="en">Sitemap</i>
+          <i class="bottomTitle" lang="kz">Cайт картасы</i>
+          <li class="bottomLink main">
+            <i lang="ru">Главная</i>
+            <i lang="en">Main page</i>
+            <i lang="kz">Главная</i>
+          </li>
+          <li class="bottomLink rooms">
+            <i lang="ru">Номера</i>
+            <i lang="en">Rooms</i>
+            <i lang="kz">Бөлмелер</i>
+          </li>
+          <li class="bottomLink bookRoomLink">
+            <i lang="ru">Бронирование номера</i>
+            <i lang="en">Room Booking</i>
+            <i lang="kz">Бөлмені брондау</i>
+          </li>
+          <li class="bottomLink service">
+            <i lang="ru">Услуги</i>
+            <i lang="en">Services</i>
+            <i lang="kz">Қызметтер</i>
+          </li>
+          <li class="bottomLink food">
+            <i lang="ru">Питание</i>
+            <i lang="en">Food</i>
+            <i lang="kz">Тамақтану</i>
+          </li>
+          <li class="bottomLink vacs">
+            <i lang="ru">Вакансии</i>
+            <i lang="en">Vacancies</i>
+            <i lang="kz">Бос жұмыс орындары</i>
+          </li>
+          <li class="bottomLink about">
+            <i lang="ru">Как добраться</i>
+            <i lang="en">Find Us</i>
+            <i lang="kz">Біз туралы</i>
+          </li>
+        </ul>
+
+        <ul id="contactUs">
+          <i class="bottomTitle" lang="ru">Связаться с нами</i>
+          <i class="bottomTitle" lang="en">Contact Us</i>
+          <i class="bottomTitle" lang="kz">Селіндік қонақ үйі</i>
+          <li class="contactUsBottom">
+            <a href="whatsapp://send?phone=77076343424">
+              <span><img class="emojiImages" src="SitePics/whatsapp.svg" /></span> Whatsapp
+            </a>
+          </li>
+          <li class="contactUsBottom">
+            <a href="mailto:celinnaya@mail.ru"><span>&#128231;</span>celinnaya@mail.ru</a>
+          </li>
+          <li class="contactUsBottom">
+            <a href="mailto:gcelinnaya@gmail.com"><span>&#128231;</span>gcelinnaya@gmail.com</a>
+          </li>
+          <li class="contactUsBottom">
+            <a href="tel:+77076343424"><span>&#128222;</span>+7 (707) 634 34 24</a>
+          </li>
+          <li class="contactUsBottom">
+            <a href="tel:+77142544366"><span>&#128222;</span>+7 (7142) 54 43 66</a>
+          </li>
+        </ul>
+
+        <ul id="bottomSocials">
+          <i class="bottomTitle" lang="ru">Мы в соцсетях</i>
+          <i class="bottomTitle" lang="en">Our socials</i>
+          <i class="bottomTitle" lang="kz">Селіндік қонақ үйі</i>
+          <li class="contactUsBottom">
+            <a href="https://www.facebook.com/HotelCelinnaya/" target="_blank" rel="noopener"
+              ><span><img class="emojiImages" src="SitePics/facebook.svg" /></span> Facebook</a
+            >
+          </li>
+          <li class="contactUsBottom">
+            <a href="https://www.instagram.com/celinnayakostanai/" target="_blank" rel="noopener"
+              ><span><img class="emojiImages" src="SitePics/instagram.svg" /></span> Instagram</a
+            >
+          </li>
+          <li class="contactUsBottom">
+            <a href="https://vk.com/" target="_blank" rel="noopener"
+              ><span><img class="emojiImages" src="SitePics/vk.svg" /></span> VKontanke</a
+            >
+          </li>
+          <li class="contactUsBottom">
+            <a href="https://ok.ru/" target="_blank" rel="noopener"
+              ><span><img class="emojiImages" src="SitePics/ok-ru.svg" /> </span> OdnoKlassniki</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div id="copyrightNotice">Hotel_Celinnaya &copy 2023</div>
+    </nav>
   </body>
 </html>

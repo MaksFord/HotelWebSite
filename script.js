@@ -5,6 +5,10 @@ const body = document.body;
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme === "dark") {
   body.classList.add("darkTheme");
+  document.getElementById("mainLogoImage").src = "SitePics/logoDark.png";
+  document.getElementById("mainLogoBottom").src = "SitePics/logoDark.png";
+} else if (savedTheme === "green") {
+  body.classList.add("greenTheme");
 }
 
 const ruText = document.getElementById("ruLang");
@@ -80,10 +84,10 @@ service.forEach((element) =>
   })
 );
 
-const vacancies = document.querySelectorAll(".vacancies");
-vacancies.forEach((element) =>
+const food = document.querySelectorAll(".food");
+food.forEach((element) =>
   element.addEventListener("click", () => {
-    window.open("vacs.html", "_self");
+    window.open("food.html", "_self");
   })
 );
 
@@ -91,6 +95,20 @@ const about = document.querySelectorAll(".about");
 about.forEach((element) =>
   element.addEventListener("click", () => {
     window.open("waypoint.html", "_self");
+  })
+);
+
+const bookRoom = document.querySelectorAll(".bookRoomLink");
+bookRoom.forEach((element) =>
+  element.addEventListener("click", () => {
+    window.open("bookingRoom.html", "_self");
+  })
+);
+
+const vacs = document.querySelectorAll(".vacs");
+vacs.forEach((element) =>
+  element.addEventListener("click", () => {
+    window.open("vacs.html", "_self");
   })
 );
 
@@ -106,71 +124,24 @@ mapLink.forEach((element) =>
 const themeSwitcher = document.getElementById("themeSwitcher");
 
 themeSwitcher.addEventListener("click", () => {
-  body.classList.toggle("darkTheme");
+  if (body.classList.contains("darkTheme")) {
+    body.classList.remove("darkTheme");
+    body.classList.add("greenTheme");
+  } else if (body.classList.contains("greenTheme")) {
+    body.classList.remove("greenTheme");
+  } else {
+    body.classList.add("darkTheme");
+  }
 
-  const currentTheme = body.classList.contains("darkTheme") ? "dark" : "default";
-  localStorage.setItem("theme", currentTheme);
+  if (body.classList.contains("darkTheme")) {
+    localStorage.setItem("theme", "dark");
+    document.getElementById("mainLogoImage").src = "SitePics/logoDark.png";
+    document.getElementById("mainLogoBottom").src = "SitePics/logoDark.png";
+  } else if (body.classList.contains("greenTheme")) {
+    localStorage.setItem("theme", "green");
+    document.getElementById("mainLogoImage").src = "SitePics/logo.png";
+    document.getElementById("mainLogoBottom").src = "SitePics/logo.png";
+  } else {
+    localStorage.setItem("theme", "default");
+  }
 });
-
-//arrows for photo sliders;
-
-document.getElementById("luxLeft").addEventListener("click", () => switchPhotoLeft("radioButtonLux"));
-document.getElementById("luxRight").addEventListener("click", () => switchPhotoRight("radioButtonLux"));
-
-document.getElementById("semiPlusLeft").addEventListener("click", () => switchPhotoLeft("radioButtonsemiPlus"));
-document.getElementById("semiPlusRight").addEventListener("click", () => switchPhotoRight("radioButtonsemiPlus"));
-
-document.getElementById("semiLuxLeft").addEventListener("click", () => switchPhotoLeft("radioButtonsemiLux"));
-document.getElementById("semiLuxRight").addEventListener("click", () => switchPhotoRight("radioButtonsemiLux"));
-
-document.getElementById("stDuoLeft").addEventListener("click", () => switchPhotoLeft("radioButtonstDuo"));
-document.getElementById("stDuoRight").addEventListener("click", () => switchPhotoRight("radioButtonstDuo"));
-
-document.getElementById("standartLeft").addEventListener("click", () => switchPhotoLeft("radioButtonStandart"));
-document.getElementById("standartRight").addEventListener("click", () => switchPhotoRight("radioButtonStandart"));
-
-document.getElementById("economLeft").addEventListener("click", () => switchPhotoLeft("radioButtonEconom"));
-document.getElementById("economRight").addEventListener("click", () => switchPhotoRight("radioButtonEconom"));
-
-//function for buttons
-function switchPhotoRight(elementName) {
-  const radios = document.getElementsByName(elementName);
-  let currentRadioIndex = -1;
-  for (let i = 0; i < radios.length; i++) {
-    if (radios[i].checked) {
-      currentRadioIndex = i;
-      break;
-    }
-  }
-  if (currentRadioIndex !== -1) {
-    radios[currentRadioIndex].checked = false;
-    if (currentRadioIndex === radios.length - 1) {
-      radios[0].checked = true;
-    } else {
-      radios[currentRadioIndex + 1].checked = true;
-    }
-  } else {
-    radios[0].checked = true;
-  }
-}
-
-function switchPhotoLeft(elementName) {
-  const radios = document.getElementsByName(elementName);
-  let currentRadioIndex = -1;
-  for (let i = 0; i < radios.length; i++) {
-    if (radios[i].checked) {
-      currentRadioIndex = i;
-      break;
-    }
-  }
-  if (currentRadioIndex !== -1) {
-    radios[currentRadioIndex].checked = false;
-    if (currentRadioIndex === 0) {
-      radios[radios.length - 1].checked = true;
-    } else {
-      radios[currentRadioIndex - 1].checked = true;
-    }
-  } else {
-    radios[0].checked = true;
-  }
-}

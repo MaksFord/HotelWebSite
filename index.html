@@ -15,7 +15,7 @@
 
     <nav class="header">
       <div id="mainLogo">
-        <img src="SitePics/mainLogo.svg" alt="CelinnayaLogo" />
+        <img id="mainLogoImage" src="SitePics/logo.png" alt="CelinnayaLogo" />
       </div>
       <div id="headerName">
         <i lang="ru">Гостиница "Целинная"</i>
@@ -75,7 +75,8 @@
 
     <!--Book Room element and navMenu-->
 
-    <div id="bookRoomContainer">
+    <div id="bookRoomContainer" class="bookRoomLink">
+      <span class="keyEmoji">&#128273</span>
       <i class="bookRoom" lang="ru">Забронировать номер</i>
       <i class="bookRoom" lang="en">Book your Room</i>
       <i class="bookRoom" lang="kz">Нөмірді брондау</i>
@@ -92,16 +93,19 @@
           <i lang="en">Rooms</i>
           <i lang="kz">Бөлмелер</i>
         </div>
+        
         <div class="navMenu service" id="service">
           <i lang="ru">Услуги</i>
           <i lang="en">Services</i>
           <i lang="kz">Қызметтер</i>
         </div>
-        <div class="navMenu vacancies" id="vacancies">
-          <i lang="ru">Вакансии</i>
-          <i lang="en">Vacancies</i>
+
+        <div class="navMenu food" id="food">
+          <i lang="ru">Питание</i>
+          <i lang="en">Food</i>
           <i lang="kz">Бос жұмыс орындары</i>
         </div>
+
 
         <div class="navMenu about" id="about">
           <i lang="ru">Как добраться</i>
@@ -120,9 +124,8 @@
 
         <div class="imageContainer">
           <picture class=".articlePhoto">
-            <source media="(min-width:1000px)" srcset="Main/Entrance1026.jpg" alt="Entrance1000px" />
-            <source media="(min-width:600px)" srcset="Main/Entrance640.jpg" alt="Entrance600px" />
-            <img src="Main/Entrance300.jpg" alt="Entrance" />
+            
+            <img src="Main/Entrance.jpg" alt="Entrance" />
           </picture>
         </div>
 
@@ -159,11 +162,11 @@
         </p>
         <div class="imageContainer">
           <picture class=".articlePhoto">
-            <img src="Main/_100.jpg" alt="RoomExample" />
+            <img src="Main/Hotel_w1920_h1080.jpg" alt="HotelPhoto" />
           </picture>
         </div>
         <p lang="ru">
-          <span class="linkedP vacancies">Наши сотрудники</span> всегда готовы помочь вам и ответить на любые вопросы,
+          <span class="linkedP vacs">Наши сотрудники</span> всегда готовы помочь вам и ответить на любые вопросы,
           связанные с бизнесом, туристическими маршрутами или местами отдыха в Костанае. Мы принимаем оплату за
           проживание как наличными, так и безналичным расчетом.
         </p>
@@ -247,7 +250,7 @@
     <nav class="footer">
       <div id="footerElements">
         <div id="bottomLogo">
-          <img id="mainLogoBottom" src="SitePics/mainLogo.svg" />
+          <img id="mainLogoBottom" src="SitePics/logo.png" />
         </div>
 
         <ul id="bottomLinks">
@@ -264,12 +267,22 @@
             <i lang="en">Rooms</i>
             <i lang="kz">Бөлмелер</i>
           </li>
+          <li class="bottomLink bookRoomLink">
+            <i lang="ru">Бронирование номера</i>
+            <i lang="en">Room Booking</i>
+            <i lang="kz">Бөлмені брондау</i>
+          </li>
           <li class="bottomLink service">
             <i lang="ru">Услуги</i>
             <i lang="en">Services</i>
             <i lang="kz">Қызметтер</i>
           </li>
-          <li class="bottomLink vacancies">
+          <li class="bottomLink food">
+            <i lang="ru">Питание</i>
+            <i lang="en">Food</i>
+            <i lang="kz">Тамақтану</i>
+          </li>
+          <li class="bottomLink vacs">
             <i lang="ru">Вакансии</i>
             <i lang="en">Vacancies</i>
             <i lang="kz">Бос жұмыс орындары</i>
@@ -287,8 +300,8 @@
           <i class="bottomTitle" lang="kz">Селіндік қонақ үйі</i>
           <li class="contactUsBottom">
             <a href="whatsapp://send?phone=77076343424">
-              <span><img class="emojiImages" src="SitePics/instagram.svg" /></span> Whatsapp</a
-            >
+              <span><img class="emojiImages" src="SitePics/whatsapp.svg" /></span> Whatsapp
+              </a>
           </li>
           <li class="contactUsBottom">
             <a href="mailto:celinnaya@mail.ru"><span>&#128231;</span>celinnaya@mail.ru</a>
@@ -331,7 +344,7 @@
         </ul>
       </div>
 
-      <div id="copyrightNotice">Hotel_Celinnaya (c) 2023</div>
+      <div id="copyrightNotice">Hotel_Celinnaya &copy 2023</div>
     </nav>
   </body>
 </html>

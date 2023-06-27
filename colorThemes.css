@@ -2,26 +2,39 @@
   --primary: #8b0000;
   --button: #6e0707;
   --secondary: #fac5c5;
-  --accent: #ffffff;
+
   --main: #ffe4e0;
   --text: #000000;
-  --h3: #170714;
-  --article: white;
+  --h3: #600202;
+
   --highlight: #ffd700;
   --border: #600202;
 }
 .darkTheme {
-  --primary: #2a019c;
+  --primary: #000000;
   --button: #1d0365;
 
-  --secondary: #090028;
-  --accent: #ffffff;
-  --main: #0f0d7a;
+  --secondary: #130057;
+
+  --main: #01002b;
   --h3: #94fff8;
   --text: #ffffff;
-  --article: #01003f;
+
   --highlight: #65f7ff;
-  --border: #1d0365;
+  --border: #060137;
+}
+.greenTheme {
+  --primary: #227200;
+  --button: #046512;
+
+  --secondary: #3fc453;
+
+  --main: #f3f8e9;
+  --h3: #553400;
+  --text: #000000;
+
+  --highlight: #ffec5a;
+  --border: #482c01ef;
 }
 body {
   background-color: var(--secondary);
@@ -86,10 +99,10 @@ mark {
 
 .linkedP:hover {
   background-color: var(--highlight);
-  color: var(--accent);
+  color: var(--border);
 }
 .imageContainer {
-  border-color: var(--highlight);
+  border-color: var(--border);
 }
 .roomPhotos {
   border-color: var(--border);
@@ -110,10 +123,23 @@ mark {
 .phoneLinkText {
   color: var(--text);
 }
+.phoneLinkText:hover {
+  background-color: var(--highlight);
+  margin: 0.3rem;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+
+  transition-duration: 1s;
+}
 .phoneLinkText > .emoji {
   color: transparent;
-  text-shadow: 0 0 0 var(--highlight);
+  text-shadow: 0 0 0 var(--border);
 }
-.compass {
-  color: red;
+
+.galleryPhoto img {
+  border-color: var(--border);
+}
+
+.vacLink {
+  color: var(--border);
 }

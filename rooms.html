@@ -8,15 +8,17 @@
 
     <link rel="stylesheet" href="rooms.css" />
     <link rel="stylesheet" href="colorThemes.css" />
-    <script src="script.js" defer></script>
+    <script src="scriptRooms.js" defer></script>
     <title>Hotel_Celinnaya_rooms</title>
   </head>
   <body>
     <!--Header   -->
 
+    <!--Header   -->
+
     <nav class="header">
       <div id="mainLogo">
-        <img src="SitePics/mainLogo.svg" alt="CelinnayaLogo" />
+        <img id="mainLogoImage" src="SitePics/logo.png" alt="CelinnayaLogo" />
       </div>
       <div id="headerName">
         <i lang="ru">Гостиница "Целинная"</i>
@@ -76,7 +78,8 @@
 
     <!--Book Room element and navMenu-->
 
-    <div id="bookRoomContainer">
+    <div id="bookRoomContainer" class="bookRoomLink">
+      <span class="keyEmoji">&#128273</span>
       <i class="bookRoom" lang="ru">Забронировать номер</i>
       <i class="bookRoom" lang="en">Book your Room</i>
       <i class="bookRoom" lang="kz">Нөмірді брондау</i>
@@ -93,16 +96,19 @@
           <i lang="en">Rooms</i>
           <i lang="kz">Бөлмелер</i>
         </div>
+        
         <div class="navMenu service" id="service">
           <i lang="ru">Услуги</i>
           <i lang="en">Services</i>
           <i lang="kz">Қызметтер</i>
         </div>
-        <div class="navMenu vacancies" id="vacancies">
-          <i lang="ru">Вакансии</i>
-          <i lang="en">Vacancies</i>
+
+        <div class="navMenu food" id="food">
+          <i lang="ru">Питание</i>
+          <i lang="en">Food</i>
           <i lang="kz">Бос жұмыс орындары</i>
         </div>
+
 
         <div class="navMenu about" id="about">
           <i lang="ru">Как добраться</i>
@@ -218,35 +224,35 @@
               <source media="(min-width:700px)" srcset="Rooms/Lux/Lux1_w960_h640.jpg" alt="LuxSuitePhoto1" />
               <source media="(min-width:400px)" srcset="Rooms/Lux/Lux1_w640_h427.jpg" alt="LuxSuitePhoto1" />
               <source media="(min-width:200px)" srcset="Rooms/Lux/Lux1_w320_h214.jpg" alt="LuxSuitePhoto1" />
-              <img src="Rooms/Lux/Lux1.jpg" alt="LuxSuitePhoto1" />
+              <img src="Rooms/Lux/Lux1_w1280_h856.jpg" alt="LuxSuitePhoto1" />
             </picture>
             <picture class="roomPhoto">
               <source media="(min-width:1400px)" srcset="Rooms/Lux/Lux2_w1280_h856.jpg" alt="LuxSuitePhoto2" />
               <source media="(min-width:700px)" srcset="Rooms/Lux/Lux2_w960_h640.jpg" alt="LuxSuitePhoto2" />
               <source media="(min-width:400px)" srcset="Rooms/Lux/Lux2_w640_h427.jpg" alt="LuxSuitePhoto2" />
               <source media="(min-width:200px)" srcset="Rooms/Lux/Lux2_w320_h214.jpg" alt="LuxSuitePhoto2" />
-              <img src="Rooms/Lux/Lux2.jpg" alt="LuxSuitePhoto2" />
+              <img src="Rooms/Lux/Lux2_w1280_h856.jpg" alt="LuxSuitePhoto2" />
             </picture>
             <picture class="roomPhoto">
               <source media="(min-width:1400px)" srcset="Rooms/Lux/Lux3_w1280_h856.jpg" alt="LuxSuitePhoto3" />
               <source media="(min-width:700px)" srcset="Rooms/Lux/Lux3_w960_h640.jpg" alt="LuxSuitePhoto3" />
               <source media="(min-width:400px)" srcset="Rooms/Lux/Lux3_w640_h427.jpg" alt="LuxSuitePhoto3" />
               <source media="(min-width:200px)" srcset="Rooms/Lux/Lux3_w320_h214.jpg" alt="LuxSuitePhoto3" />
-              <img src="Rooms/Lux/Lux3.jpg" alt="LuxSuitePhoto3" />
+              <img src="Rooms/Lux/Lux3_w1280_h856.jpg" alt="LuxSuitePhoto3" />
             </picture>
             <picture class="roomPhoto">
               <source media="(min-width:1400px)" srcset="Rooms/Lux/Lux4_w1280_h856.jpg" alt="LuxSuitePhoto4" />
               <source media="(min-width:700px)" srcset="Rooms/Lux/Lux4_w960_h640.jpg" alt="LuxSuitePhoto4" />
               <source media="(min-width:400px)" srcset="Rooms/Lux/Lux4_w640_h427.jpg" alt="LuxSuitePhoto4" />
               <source media="(min-width:200px)" srcset="Rooms/Lux/Lux4_w320_h214.jpg" alt="LuxSuitePhoto4" />
-              <img src="Rooms/Lux/Lux4.jpg" alt="LuxSuitePhoto4" />
+              <img src="Rooms/Lux/Lux4_w1280_h856.jpg" alt="LuxSuitePhoto4" />
             </picture>
             <picture class="roomPhoto">
               <source media="(min-width:1400px)" srcset="Rooms/Lux/Lux5_w1280_h856.jpg" alt="LuxSuitePhoto5" />
               <source media="(min-width:700px)" srcset="Rooms/Lux/Lux5_w960_h640.jpg" alt="LuxSuitePhoto5" />
               <source media="(min-width:400px)" srcset="Rooms/Lux/Lux5_w640_h427.jpg" alt="LuxSuitePhoto5" />
               <source media="(min-width:200px)" srcset="Rooms/Lux/Lux5_w320_h214.jpg" alt="LuxSuitePhoto5" />
-              <img src="Rooms/Lux/Lux5.jpg" alt="LuxSuitePhoto5" />
+              <img src="Rooms/Lux/Lux5_w1280_h856.jpg" alt="LuxSuitePhoto5" />
             </picture>
 
             <div class="sliderManual unfading">
@@ -266,8 +272,8 @@
             <mark>Стоимость:</mark> 19000-22500 тенге (сутки)<br />
             15000 тенге (полсуток)<br /><br />
             <mark>Описание:</mark> двухкомнатный номер или большая студия для одного-двух человек, большая кровать,
-            диван. <br />
-            Площадь номера 37.8кв.м. <br /><br />
+            диван, шкаф, трюмо, стол и стулья. <br />
+            Площадь номера 40 кв.м. <br /><br />
             <mark>Дополнительно:</mark> телефон, холодильник, кабельное телевидение, кондиционер, фен, электрочайник,
             Wi-Fi, круглосуточная парковка.
           </p>
@@ -277,7 +283,8 @@
             ><br />
             <a class="phoneLinkText" href="tel:+77142544366"><span class="emoji">&#128222;</span>+7 (7142) 54 43 66</a>
           </p>
-          <button class="bookRoomMini">
+          <button onclick="location.href='bookingRoom.html?selectedRoom=lux'" class="bookRoomMini">
+            <span class="keyEmoji">&#128273</span>
             <i lang="ru">Забронировать номер</i>
             <i lang="en">Book the Room</i>
             <i lang="kz">Нөмірді брондау</i>
@@ -343,7 +350,7 @@
                 srcset="Rooms/SemiPlus/SemiPlus2_w320_h214.jpg"
                 alt="juniorSuitePlusPhoto2"
               />
-              <img src="Rooms/SemiPlus/SemiPlus2.jpg" alt="juniorSuitePlusPhoto2" />
+              <img src="Rooms/SemiPlus/SemiPlus2_w1280_h856.jpg" alt="juniorSuitePlusPhoto2" />
             </picture>
             <picture class="roomPhoto">
               <source
@@ -366,7 +373,7 @@
                 srcset="Rooms/SemiPlus/SemiPlus3_w320_h214.jpg"
                 alt="juniorSuitePlusPhoto3"
               />
-              <img src="Rooms/SemiPlus/SemiPlus3.jpg" alt="juniorSuitePlusPhoto3" />
+              <img src="Rooms/SemiPlus/SemiPlus3_w1280_h856.jpg" alt="juniorSuitePlusPhoto3" />
             </picture>
             <picture class="roomPhoto">
               <source
@@ -389,7 +396,7 @@
                 srcset="Rooms/SemiPlus/SemiPlus4_w320_h214.jpg"
                 alt="juniorSuitePlusPhoto4"
               />
-              <img src="Rooms/SemiPlus/SemiPlus4.jpg" alt="juniorSuitePlusPhoto4" />
+              <img src="Rooms/SemiPlus/SemiPlus4_w1280_h856.jpg" alt="juniorSuitePlusPhoto4" />
             </picture>
             <picture class="roomPhoto">
               <source
@@ -412,7 +419,7 @@
                 srcset="Rooms/SemiPlus/SemiPlus5_w320_h214.jpg"
                 alt="juniorSuitePlusPhoto5"
               />
-              <img src="Rooms/SemiPlus/SemiPlus5.jpg" alt="juniorSuitePlusPhoto5" />
+              <img src="Rooms/SemiPlus/SemiPlus5_w1280_h856.jpg" alt="juniorSuitePlusPhoto5" />
             </picture>
 
             <div class="sliderManual unfading">
@@ -431,8 +438,8 @@
           <p lang="ru" class="infoDescription">
             <mark>Стоимость:</mark> 15000-18000 тенге (сутки)<br />
             9500 тенге (полсуток)<br /><br />
-            <mark>Описание:</mark> однокомнатный номер для одного, большая кровать <br />
-            Площадь номера 17кв.м. <br /><br />
+            <mark>Описание:</mark> однокомнатный номер для одного, большая кровать, большой шкаф, трюмо, кресла и стулья <br />
+            Площадь номера 20 кв.м. <br /><br />
             <mark>Дополнительно:</mark> телефон, холодильник, кабельное телевидение, кондиционер, электрочайник, Wi-Fi,
             круглосуточная парковка.
           </p>
@@ -442,7 +449,8 @@
             ><br />
             <a class="phoneLinkText" href="tel:+77142544366"><span class="emoji">&#128222;</span>+7 (7142) 54 43 66</a>
           </p>
-          <button class="bookRoomMini">
+          <button onclick="location.href='bookingRoom.html?selectedRoom=semiPlus'" class="bookRoomMini">
+            <span class="keyEmoji">&#128273</span>
             <i lang="ru">Забронировать номер</i>
             <i lang="en">Book the Room</i>
             <i lang="kz">Нөмірді брондау</i>
@@ -450,6 +458,7 @@
         </div>
       </article>
 
+<!--SEMILUX-->
       <div id="semiLuxHeader">
         <h3 lang="ru">Полулюкс</h3>
         <h3 lang="en">Junior Suite</h3>
@@ -473,7 +482,7 @@
               <source media="(min-width:700px)" srcset="Rooms/Semilux/SemiLux1_w960_h640.jpg" alt="juniorSuitePhoto1" />
               <source media="(min-width:400px)" srcset="Rooms/Semilux/SemiLux1_w640_h427.jpg" alt="juniorSuitePhoto1" />
               <source media="(min-width:200px)" srcset="Rooms/Semilux/SemiLux1_w320_h214.jpg" alt="juniorSuitePhoto1" />
-              <img src="Rooms/Semilux/SemiLux1.jpg" alt="juniorSuitePhoto1" />
+              <img src="Rooms/Semilux/SemiLux1_w1280_h856.jpg" alt="juniorSuitePhoto1" />
             </picture>
             <picture class="roomPhoto">
               <source
@@ -496,7 +505,7 @@
                 srcset="Rooms/Semilux/SemiLux2_w320_h214.jpg"
                 alt="juniorSuitePlusPhoto2"
               />
-              <img src="Rooms/Semilux/SemiLux2.jpg" alt="juniorSuitePhoto2" />
+              <img src="Rooms/Semilux/SemiLux2_w1280_h856.jpg" alt="juniorSuitePhoto2" />
             </picture>
             <picture class="roomPhoto">
               <source
@@ -507,7 +516,7 @@
               <source media="(min-width:700px)" srcset="Rooms/Semilux/SemiLux3_w960_h640.jpg" alt="juniorSuitePhoto3" />
               <source media="(min-width:400px)" srcset="Rooms/Semilux/SemiLux3_w640_h427.jpg" alt="juniorSuitePhoto3" />
               <source media="(min-width:200px)" srcset="Rooms/Semilux/SemiLux3_w320_h214.jpg" alt="juniorSuitePhoto3" />
-              <img src="Rooms/Semilux/SemiLux3.jpg" alt="Lux" />
+              <img src="Rooms/Semilux/SemiLux3_w1280_h856.jpg" alt="Lux" />
             </picture>
             <picture class="roomPhoto">
               <source
@@ -518,7 +527,7 @@
               <source media="(min-width:700px)" srcset="Rooms/Semilux/SemiLux4_w960_h640.jpg" alt="juniorSuitePhoto4" />
               <source media="(min-width:400px)" srcset="Rooms/Semilux/SemiLux4_w640_h427.jpg" alt="juniorSuitePhoto4" />
               <source media="(min-width:200px)" srcset="Rooms/Semilux/SemiLux4_w320_h214.jpg" alt="juniorSuitePhoto4" />
-              <img src="Rooms/Semilux/SemiLux4.jpg" alt="juniorSuitePhoto5" />
+              <img src="Rooms/Semilux/SemiLux4_w1280_h856.jpg" alt="juniorSuitePhoto5" />
             </picture>
             <picture class="roomPhoto">
               <source
@@ -529,7 +538,7 @@
               <source media="(min-width:700px)" srcset="Rooms/Semilux/SemiLux5_w960_h640.jpg" alt="juniorSuitePhoto5" />
               <source media="(min-width:400px)" srcset="Rooms/Semilux/SemiLux5_w640_h427.jpg" alt="juniorSuitePhoto5" />
               <source media="(min-width:200px)" srcset="Rooms/Semilux/SemiLux5_w320_h214.jpg" alt="juniorSuitePhoto5" />
-              <img src="Rooms/Semilux/SemiLux5.jpg" alt="juniorSuitePhoto5" />
+              <img src="Rooms/Semilux/SemiLux5_w1280_h856.jpg" alt="juniorSuitePhoto5" />
             </picture>
 
             <div class="sliderManual unfading">
@@ -548,7 +557,7 @@
           <p lang="ru" class="infoDescription">
             <mark>Стоимость:</mark> 11500-13500 тенге (сутки)<br />
             9500 тенге (полсуток)<br /><br />
-            <mark>Описание:</mark> однокомнатный номер для одного, большая кровать <br />
+            <mark>Описание:</mark> однокомнатный номер для одного, большая кровать, шкаф, диван или кресло, стол и дополнительные стулья <br />
             Площадь номера 17кв.м. <br /><br />
             <mark>Дополнительно:</mark> телефон, холодильник, кабельное телевидение, кондиционер, электрочайник, Wi-Fi,
             круглосуточная парковка.
@@ -559,14 +568,15 @@
             ><br />
             <a class="phoneLinkText" href="tel:+77142544366"><span class="emoji">&#128222;</span>+7 (7142) 54 43 66</a>
           </p>
-          <button class="bookRoomMini">
+          <button onclick="location.href='bookingRoom.html?selectedRoom=semiLux'" class="bookRoomMini">
+            <span class="keyEmoji">&#128273</span>
             <i lang="ru">Забронировать номер</i>
             <i lang="en">Book the Room</i>
             <i lang="kz">Нөмірді брондау</i>
           </button>
         </div>
       </article>
-
+<!--STANDART DOUBLE-->
       <div id="standartDuoHeader">
         <h3 lang="ru">Стандарт двухместный</h3>
         <h3 lang="en">Standart double</h3>
@@ -582,7 +592,7 @@
             <input type="radio" name="radioButtonstDuo" id="stDuo5" />
 
             <picture class="roomPhoto stDuoMainPhoto">
-              <source media="(min-width:1400px)" srcset="Rooms/StandartDuo/StDuo1.jpg" alt="StandartDoublePhoto1" />
+              <source media="(min-width:1400px)" srcset="Rooms/StandartDuo/StDuo1_w1280_h856.jpg" alt="StandartDoublePhoto1" />
               <source
                 media="(min-width:700px)"
                 srcset="Rooms/StandartDuo/StDuo1_w960_h640.jpg"
@@ -598,7 +608,7 @@
                 srcset="Rooms/StandartDuo/StDuo1_w320_h214.jpg"
                 alt="StandartDoublePhoto1"
               />
-              <img src="Rooms/Lux/Lux1.jpg" alt="Lux" />
+              <img src="Rooms/StandartDuo/StDuo1_w1280_h856.jpg" alt="StandartDoubleRoomPhoto1" />
             </picture>
             <picture class="roomPhoto">
               <source
@@ -621,7 +631,7 @@
                 srcset="Rooms/StandartDuo/StDuo2_w320_h214.jpg"
                 alt="StandartDoublePhoto2"
               />
-              <img src="Rooms/Lux/Lux2.jpg" alt="Lux" />
+              <img src="Rooms/StandartDuo/StDuo2_w1280_h856.jpg" alt="StandartDoubleRoomPhoto2" />
             </picture>
             <picture class="roomPhoto">
               <source
@@ -644,7 +654,7 @@
                 srcset="Rooms/StandartDuo/StDuo3_w320_h214.jpg"
                 alt="StandartDoublePhoto3"
               />
-              <img src="Rooms/Lux/Lux3.jpg" alt="Lux" />
+              <img src="Rooms/StandartDuo/StDuo3_w1280_h856.jpg" alt="StandartDoubleRoomPhoto2"/>
             </picture>
             <picture class="roomPhoto">
               <source
@@ -667,7 +677,7 @@
                 srcset="Rooms/StandartDuo/StDuo4_w320_h214.jpg"
                 alt="StandartDoublePhoto4"
               />
-              <img src="Rooms/Lux/Lux4.jpg" alt="Lux" />
+              <img src="Rooms/StandartDuo/StDuo4_w1280_h856.jpg" alt="StandartDoubleRoomPhoto4"/>
             </picture>
             <picture class="roomPhoto">
               <source
@@ -690,7 +700,7 @@
                 srcset="Rooms/StandartDuo/StDuo5_w320_h214.jpg"
                 alt="StandartDoublePhoto5"
               />
-              <img src="Rooms/Lux/Lux5.jpg" alt="Lux" />
+              <img src="Rooms/StandartDuo/StDuo5_w1280_h856.jpg" alt="StandartDoubleRoomPhoto5"/>
             </picture>
 
             <div class="sliderManual unfading">
@@ -709,7 +719,7 @@
           <p lang="ru" class="infoDescription">
             <mark>Стоимость:</mark> 14000-16500 тенге (сутки)<br />
             10000 тенге (полсуток)<br /><br />
-            <mark>Описание:</mark> номер для двоих, две кровати. <br />
+            <mark>Описание:</mark> номер для двоих, две кровати, прикроватные тумбочки, шкаф, стол и стулья <br />
             Площадь номера 17кв.м. <br /><br />
             <mark>Дополнительно:</mark> телефон, холодильник, кабельное телевидение, Wi-Fi, круглосуточная парковка.
           </p>
@@ -719,7 +729,8 @@
             ><br />
             <a class="phoneLinkText" href="tel:+77142544366"><span class="emoji">&#128222;</span>+7 (7142) 54 43 66</a>
           </p>
-          <button class="bookRoomMini">
+          <button onclick="location.href='bookingRoom.html?selectedRoom=stDouble'" class="bookRoomMini">
+            <span class="keyEmoji">&#128273</span>
             <i lang="ru">Забронировать номер</i>
             <i lang="en">Book the Room</i>
             <i lang="kz">Нөмірді брондау</i>
@@ -764,7 +775,7 @@
                 srcset="Rooms/Standart/Standart1_w320_h214.jpg"
                 alt="StandartRoomPhoto1"
               />
-              <img src="Rooms/Standart/Standart1.jpg" alt="StandartRoomPhoto1" />
+              <img src="Rooms/Standart/Standart1_w1280_h856.jpg" alt="StandartRoomPhoto1" />
             </picture>
             <picture class="roomPhoto">
               <source
@@ -787,7 +798,7 @@
                 srcset="Rooms/Standart/Standart2_w320_h214.jpg"
                 alt="StandartRoomPhoto2"
               />
-              <img src="Rooms/Standart/Standart2.jpg" alt="StandartRoomPhoto2" />
+              <img src="Rooms/Standart/Standart2_w1280_h856.jpg" alt="StandartRoomPhoto2" />
             </picture>
             <picture class="roomPhoto">
               <source
@@ -810,7 +821,7 @@
                 srcset="Rooms/Standart/Standart3_w320_h214.jpg"
                 alt="StandartRoomPhoto3"
               />
-              <img src="Rooms/Standart/Standart3.jpg" alt="StandartRoomPhoto3" />
+              <img src="Rooms/Standart/Standart3_w1280_h856.jpg" alt="StandartRoomPhoto3" />
             </picture>
             <picture class="roomPhoto">
               <source
@@ -833,7 +844,7 @@
                 srcset="Rooms/Standart/Standart4_w320_h214.jpg"
                 alt="StandartRoomPhoto4"
               />
-              <img src="Rooms/Standart/Standart4.jpg" alt="StandartRoomPhoto4" />
+              <img src="Rooms/Standart/Standart4_w1280_h856.jpg" alt="StandartRoomPhoto4" />
             </picture>
             <picture class="roomPhoto">
               <source
@@ -856,7 +867,7 @@
                 srcset="Rooms/Standart/Standart5_w320_h214.jpg"
                 alt="StandartRoomPhoto5"
               />
-              <img src="Rooms/Standart/Standart5.jpg" alt="StandartRoomPhoto5" />
+              <img src="Rooms/Standart/Standart5_w1280_h856.jpg" alt="StandartRoomPhoto5" />
             </picture>
 
             <div class="sliderManual unfading">
@@ -875,7 +886,7 @@
           <p lang="ru" class="infoDescription">
             <mark>Стоимость:</mark> 9500-11500 тенге (сутки)<br />
             8000 тенге (полсуток)<br /><br />
-            <mark>Описание:</mark> номер для одного, одна кровать. <br />
+            <mark>Описание:</mark> номер для одного, одна кровать, прикроватная тумбочка, стол и стулья <br />
             Площадь номера 14кв.м. <br /><br />
             <mark>Дополнительно:</mark> телефон, холодильник, кабельное телевидение, Wi-Fi, круглосуточная парковка.
           </p>
@@ -885,7 +896,8 @@
             ><br />
             <a class="phoneLinkText" href="tel:+77142544366"><span class="emoji">&#128222;</span>+7 (7142) 54 43 66</a>
           </p>
-          <button class="bookRoomMini">
+          <button onclick="location.href='bookingRoom.html?selectedRoom=standart'" class="bookRoomMini">
+            <span class="keyEmoji">&#128273</span>
             <i lang="ru">Забронировать номер</i>
             <i lang="en">Book the Room</i>
             <i lang="kz">Нөмірді брондау</i>
@@ -914,35 +926,35 @@
               <source media="(min-width:700px)" srcset="Rooms/Econom/Econom1_w960_h640.jpg" alt="EconomRoomPhoto1" />
               <source media="(min-width:400px)" srcset="Rooms/Econom/Econom1_w640_h427.jpg" alt="EconomRoomPhoto1" />
               <source media="(min-width:200px)" srcset="Rooms/Econom/Econom1_w320_h214.jpg" alt="EconomRoomPhoto1" />
-              <img src="Rooms/Econom/Econom1.jpg" alt="EconomRoomPhoto1" />
+              <img src="Rooms/Econom/Econom1_w1280_h856.jpg" alt="EconomRoomPhoto1" />
             </picture>
             <picture class="roomPhoto">
               <source media="(min-width:1400px)" srcset="Rooms/Econom/Econom2_w1280_h856.jpg" alt="EconomRoomPhoto2" />
               <source media="(min-width:700px)" srcset="Rooms/Econom/Econom2_w960_h640.jpg" alt="EconomRoomPhoto2" />
               <source media="(min-width:400px)" srcset="Rooms/Econom/Econom2_w640_h427.jpg" alt="EconomRoomPhoto2" />
               <source media="(min-width:200px)" srcset="Rooms/Econom/Econom2_w320_h214.jpg" alt="EconomRoomPhoto2" />
-              <img src="Rooms/Econom/Econom2.jpg" alt="EconomRoomPhoto2" />
+              <img src="Rooms/Econom/Econom2_w1280_h856.jpg" alt="EconomRoomPhoto2" />
             </picture>
             <picture class="roomPhoto">
               <source media="(min-width:1400px)" srcset="Rooms/Econom/Econom3_w1280_h856.jpg" alt="EconomRoomPhoto3" />
               <source media="(min-width:700px)" srcset="Rooms/Econom/Econom3_w960_h640.jpg" alt="EconomRoomPhoto3" />
               <source media="(min-width:400px)" srcset="Rooms/Econom/Econom3_w640_h427.jpg" alt="EconomRoomPhoto3" />
               <source media="(min-width:200px)" srcset="Rooms/Econom/Econom3_w320_h214.jpg" alt="EconomRoomPhoto3" />
-              <img src="Rooms/Econom/Econom3.jpg" alt="EconomRoomPhoto3" />
+              <img src="Rooms/Econom/Econom3_w1280_h856.jpg" alt="EconomRoomPhoto3" />
             </picture>
             <picture class="roomPhoto">
               <source media="(min-width:1400px)" srcset="Rooms/Econom/Econom4_w1280_h856.jpg" alt="EconomRoomPhoto4" />
               <source media="(min-width:700px)" srcset="Rooms/Econom/Econom4_w960_h640.jpg" alt="EconomRoomPhoto4" />
               <source media="(min-width:400px)" srcset="Rooms/Econom/Econom4_w640_h427.jpg" alt="EconomRoomPhoto4" />
               <source media="(min-width:200px)" srcset="Rooms/Econom/Econom4_w320_h214.jpg" alt="EconomRoomPhoto4" />
-              <img src="Rooms/Econom/Econom4.jpg" alt="EconomRoomPhoto4" />
+              <img src="Rooms/Econom/Econom4_w1280_h856.jpg" alt="EconomRoomPhoto4" />
             </picture>
             <picture class="roomPhoto">
               <source media="(min-width:1400px)" srcset="Rooms/Econom/Econom5_w1280_h856.jpg" alt="EconomRoomPhoto5" />
               <source media="(min-width:700px)" srcset="Rooms/Econom/Econom5_w960_h640.jpg" alt="EconomRoomPhoto5" />
               <source media="(min-width:400px)" srcset="Rooms/Econom/Econom5_w640_h427.jpg" alt="EconomRoomPhoto5" />
               <source media="(min-width:200px)" srcset="Rooms/Econom/Econom5_w320_h214.jpg" alt="EconomRoomPhoto5" />
-              <img src="Rooms/Econom/Econom5.jpg" alt="EconomRoomPhoto5" />
+              <img src="Rooms/Econom/Econom5_w1280_h856.jpg" alt="EconomRoomPhoto5" />
             </picture>
 
             <div class="sliderManual unfading">
@@ -963,7 +975,7 @@
             заселение на полсуток не предусмотрено.
             <br /><br />
             <mark>Описание:</mark> бюджетный номер на одну или две комнаты, до 3х кроватей на комнату, шкаф и тумбочки в
-            номерах <br /><br />
+            номерах. <br /><br />
             <mark>Дополнительно:</mark> Wi-Fi, круглосуточная парковка.
           </p>
           <p lang="ru">
@@ -972,7 +984,8 @@
             ><br />
             <a class="phoneLinkText" href="tel:+77142544366"><span class="emoji">&#128222;</span>+7 (7142) 54 43 66</a>
           </p>
-          <button class="bookRoomMini">
+          <button onclick="location.href='bookingRoom.html?selectedRoom=econom'" class="bookRoomMini">
+            <span class="keyEmoji">&#128273</span>
             <i lang="ru">Забронировать номер</i>
             <i lang="en">Book the Room</i>
             <i lang="kz">Нөмірді брондау</i>
@@ -985,7 +998,7 @@
     <nav class="footer">
       <div id="footerElements">
         <div id="bottomLogo">
-          <img id="mainLogoBottom" src="SitePics/mainLogo.svg" />
+          <img id="mainLogoBottom" src="SitePics/logo.png" />
         </div>
 
         <ul id="bottomLinks">
@@ -1002,12 +1015,22 @@
             <i lang="en">Rooms</i>
             <i lang="kz">Бөлмелер</i>
           </li>
+          <li class="bottomLink bookRoomLink">
+            <i lang="ru">Бронирование номера</i>
+            <i lang="en">Room Booking</i>
+            <i lang="kz">Бөлмені брондау</i>
+          </li>
           <li class="bottomLink service">
             <i lang="ru">Услуги</i>
             <i lang="en">Services</i>
             <i lang="kz">Қызметтер</i>
           </li>
-          <li class="bottomLink vacancies">
+          <li class="bottomLink food">
+            <i lang="ru">Питание</i>
+            <i lang="en">Food</i>
+            <i lang="kz">Тамақтану</i>
+          </li>
+          <li class="bottomLink vacs">
             <i lang="ru">Вакансии</i>
             <i lang="en">Vacancies</i>
             <i lang="kz">Бос жұмыс орындары</i>
@@ -1025,8 +1048,8 @@
           <i class="bottomTitle" lang="kz">Селіндік қонақ үйі</i>
           <li class="contactUsBottom">
             <a href="whatsapp://send?phone=77076343424">
-              <span><img class="emojiImages" src="SitePics/instagram.svg" /></span> Whatsapp</a
-            >
+              <span><img class="emojiImages" src="SitePics/whatsapp.svg" /></span> Whatsapp
+              </a>
           </li>
           <li class="contactUsBottom">
             <a href="mailto:celinnaya@mail.ru"><span>&#128231;</span>celinnaya@mail.ru</a>
@@ -1069,7 +1092,7 @@
         </ul>
       </div>
 
-      <div id="copyrightNotice">Hotel_Celinnaya (c) 2023</div>
+      <div id="copyrightNotice">Hotel_Celinnaya &copy 2023</div>
     </nav>
   </body>
 </html>

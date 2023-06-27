@@ -1,0 +1,354 @@
+html {
+  --photo: 40rem;
+  --photoH: 23rem;
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+main {
+  margin: 0 10%;
+}
+article {
+  margin-bottom: 1rem;
+}
+.roomArticle {
+  margin: 0.5rem;
+  display: flex;
+  font-size: 1rem;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+
+.roomPhotos {
+  width: var(--photo);
+  height: var(--photoH);
+
+  display: block;
+  flex-shrink: 0;
+
+  border: 5px solid;
+}
+
+.roomPhotos img {
+  width: var(--photo);
+  height: var(--photoH);
+  display: block;
+}
+.roomDescription {
+  display: flex;
+  flex-direction: column;
+}
+.infoDescription {
+  margin-top: 0;
+  margin-bottom: 0, 5rem;
+}
+.infoLast {
+  margin-bottom: 0;
+}
+.bookRoomMini {
+  padding: 1rem 3rem 1rem 2rem;
+  border: 2px solid;
+  border-radius: 1rem;
+  align-self: center;
+  font-size: 1rem;
+}
+/*slider*/
+.roomPhotos {
+  position: relative;
+  overflow: hidden;
+}
+
+.roomPhotosSlides {
+  width: 500%;
+  height: 100%;
+  display: flex;
+}
+.roomPhotosSlides input {
+  display: none;
+}
+/*css for manual navigation*/
+.sliderManual {
+  position: absolute;
+  margin-top: calc(var(--photoH) * 0.85);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.manualButton {
+  border: 2px solid black;
+
+  padding: 0.4rem;
+  border-radius: 1rem;
+
+  cursor: pointer;
+  transition: 1s;
+}
+
+#rest1:checked ~ .mainPhoto {
+  margin-left: 0;
+}
+#rest1:checked ~ .sliderManual #labelRest1,
+#rest2:checked ~ .sliderManual #labelRest2,
+#rest3:checked ~ .sliderManual #labelRest3 {
+  background: var(--border);
+}
+#rest2:checked ~ .mainPhoto {
+  margin-left: calc((var(--photo) * -1));
+}
+
+#rest3:checked ~ .mainPhoto {
+  margin-left: calc((var(--photo) * -2));
+}
+
+.manualButton:hover {
+  background: var(--highlight);
+}
+
+/*addutuinal photos for rest and cafe*/
+
+.imageGalleryPortrait {
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.galleryPhoto img {
+  width: 15rem;
+  height: 20rem;
+  border: 0.2rem solid var(--border);
+}
+
+/*control elements of photo slider */
+.leftScroll,
+.rightScroll {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 35%;
+  width: 15%;
+  height: 25%;
+  background-color: black;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftScroll {
+  left: -1rem;
+  border-radius: 0 10% 10% 0;
+}
+
+.rightScroll {
+  right: -1rem;
+  border-radius: 10% 0 0 10%;
+}
+
+.arrowLeft {
+  margin: 0;
+  width: 50%;
+  height: 50%;
+  clip-path: polygon(100% 0%, 100% 100%, 0% 50%);
+  background-color: white;
+}
+.arrowRight {
+  margin: 0;
+  width: 50%;
+  height: 50%;
+  clip-path: polygon(0% 0%, 0% 100%, 100% 50%);
+
+  background-color: white;
+}
+
+.unfading {
+  opacity: 70%;
+  visibility: hidden;
+}
+.roomPhotos:hover .unfading {
+  visibility: visible;
+  transition: 1s;
+}
+
+/*media queries*/
+
+@media (min-width: 1400px) {
+  html {
+    --photo: 40rem;
+    --photoH: 27rem;
+  }
+  .roomArticle {
+    margin: 2rem 5%;
+  }
+  .roomPhotos {
+    border: 0.3rem solid;
+  }
+}
+@media (max-width: 1260px) {
+  html {
+    --photo: 36rem;
+    --photoH: 21rem;
+  }
+}
+@media (max-width: 1160px) {
+  html {
+    --photo: 35rem;
+    --photoH: 20rem;
+  }
+  main {
+    margin: 0 5%;
+  }
+  article {
+    margin-bottom: 4.5rem;
+  }
+}
+
+@media (orientation: portrait) or (max-width: 980px) {
+  main {
+    margin: 0 5%;
+  }
+  .roomArticle {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem 0;
+  }
+  html {
+    --photo: 35rem;
+    --photoH: 20rem;
+  }
+  .galleryPhoto img {
+    width: 12rem;
+    height: 16rem;
+    border: 3px solid;
+  }
+  .imageGalleryPortrait {
+    margin: 0 5%;
+    gap: 0.8rem;
+  }
+  .roomPhotos {
+    border: 4px solid;
+  }
+  .roomDescription {
+    width: 80%;
+  }
+  .leftScroll {
+    left: -0.8rem;
+  }
+
+  .rightScroll {
+    right: -0.8rem;
+  }
+}
+
+@media (max-width: 650px) {
+  html {
+    --photo: 30rem;
+    --photoH: 17.2rem;
+  }
+  main {
+    margin: 0 5%;
+  }
+  .roomArticle {
+    margin: 2rem 0;
+  }
+  .roomPhotos {
+    border: 3px solid;
+  }
+  .roomDescription {
+    width: 90%;
+  }
+  .leftScroll {
+    left: -0.6rem;
+  }
+  .galleryPhoto img {
+    width: 9rem;
+    height: 12rem;
+    border: 3px solid;
+  }
+  .imageGalleryPortrait {
+    margin: 0 4%;
+    gap: 0.6rem;
+  }
+
+  .rightScroll {
+    right: -0.6rem;
+  }
+}
+@media (max-width: 560px) {
+  html {
+    --photo: 25rem;
+    --photoH: 14rem;
+  }
+}
+@media (max-width: 460px) {
+  html {
+    --photo: 20rem;
+    --photoH: 11.5rem;
+  }
+  .leftScroll {
+    left: -0.5rem;
+  }
+
+  .rightScroll {
+    right: -0.5rem;
+  }
+  .galleryPhoto img {
+    width: 6rem;
+    height: 8rem;
+    border: 2px solid;
+  }
+  .imageGalleryPortrait {
+    margin: 0 3%;
+    gap: 0.5rem;
+  }
+}
+@media (max-width: 400px) {
+  html {
+    --photo: 18rem;
+    --photoH: 10rem;
+  }
+  main {
+    margin: 0 5%;
+  }
+  .roomArticle {
+    margin: 1rem 0;
+  }
+  .roomPhotos {
+    border: 2px solid;
+  }
+  .roomDescription {
+    width: 90%;
+  }
+}
+@media (max-width: 340px) {
+  html {
+    --photo: 16rem;
+    --photoH: 9rem;
+  }
+  .leftScroll {
+    left: -0.4rem;
+  }
+
+  .rightScroll {
+    right: -0.4rem;
+  }
+}
+
+h3 {
+  color: var(--border);
+}
+mark {
+  font-weight: bold;
+  background-color: inherit;
+}
+.intro {
+  text-align: center;
+}
