@@ -101,7 +101,7 @@ about.forEach((element) =>
 const bookRoom = document.querySelectorAll(".bookRoomLink");
 bookRoom.forEach((element) =>
   element.addEventListener("click", () => {
-    window.open("bookingRoom.html", "_self");
+    window.open("bookingRoom.html?selectedRoom=lux", "_self");
   })
 );
 

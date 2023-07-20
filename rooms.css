@@ -95,6 +95,7 @@ article {
   margin-top: 0;
 }
 .bookRoomMini {
+  margin: 1rem;
   padding: 1rem 3rem 1rem 2rem;
   border: 2px solid;
   border-radius: 1rem;
@@ -544,4 +545,7 @@ h3 {
 .bookRoomMini:hover .keyEmoji {
   text-shadow: 0 0 0 var(--button);
   transition: 1s;
+}
+.lastDesc {
+  margin-bottom: 0;
 }
