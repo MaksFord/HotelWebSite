@@ -96,7 +96,7 @@ function validateInput() {
     document.getElementById("dateArrival").className === "valid" &&
     (document.getElementById("halfStay").className === "valid" ||
       document.getElementById("dateDeparture").className === "valid") &&
-    roomsContainer.className === "invalid"
+    roomsContainer.className === "valid"
   ) {
     alert("everything is ok, validation went successful");
     return true;
