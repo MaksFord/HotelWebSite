@@ -117,12 +117,14 @@
   </div>
 </nav>
 
+<!--MAIN PAGESTARTS HERE!!-->
 
   <main>
     <h3 lang="ru">Бронирование номера</h3>
     <h3 lang="en">Room reservation</h3>
     <h3 lang="kz">Бөлмені брондау</h3>
-    <form id="bookRoomForm">
+<!--FORM-->
+    <form id="bookRoomForm" onsubmit="return validateInput()" method="post" action="sendEmail.php">
       <div class="InputDiv">
         <div>
           <label for="name">
@@ -220,7 +222,7 @@
         </div>
       </div>
 
-      <div id="roomsContainer" >
+      <div id="roomsContainer" class="invalid">
         <input type="radio" name="roomType" id="lux" value="Люкс" />
 
         <label for="lux" class="roomTypeLabel"
@@ -287,6 +289,14 @@
           </div>
         </label>
       </div>
+
+      <div class="warningDiv">
+        <p lang="ru">Выберите тип номера</p>
+        <p lang="en">Select Room Type</p>
+        <p lang="kz">Бөлме түрін таңдаңыз</p>   
+      </div>
+
+
      
 
       <label for="userMessage">

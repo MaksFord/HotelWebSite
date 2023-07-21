@@ -67,7 +67,25 @@ document.getElementById("halfStay").addEventListener("change", function () {
   }
 });
 
-document.getElementById("sendForm").addEventListener("click", (e) => validateInput());
+/// BUTTONS CONTAINER
+
+const roomsContainer = document.getElementById("roomsContainer");
+const radioInputs = roomsContainer.querySelectorAll('input[type="radio"]');
+
+function checkValidity() {
+  for (const radioInput of radioInputs) {
+    if (radioInput.checked) {
+      roomsContainer.className = "valid";
+      return;
+    }
+  }
+  roomsContainer.className = "invalid";
+}
+
+for (const radioInput of radioInputs) {
+  radioInput.addEventListener("change", checkValidity);
+}
+
 //BUTTON ACTIVATION (ALL FIELDS ARE FILLED)
 function validateInput() {
   if (
@@ -77,10 +95,13 @@ function validateInput() {
     document.getElementById("phoneNumber").className === "valid" &&
     document.getElementById("dateArrival").className === "valid" &&
     (document.getElementById("halfStay").className === "valid" ||
-      document.getElementById("dateDeparture").className === "valid")
+      document.getElementById("dateDeparture").className === "valid") &&
+    roomsContainer.className === "invalid"
   ) {
-    alert("everything is ok");
+    alert("everything is ok, validation went successful");
+    return true;
   } else {
     alert("fill the rest of fields");
+    return false;
   }
 }
