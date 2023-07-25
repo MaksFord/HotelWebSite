@@ -52,12 +52,12 @@ instagram.addEventListener("click", () => {
 });
 const vk = document.getElementById("vk");
 vk.addEventListener("click", () => {
-  window.open("https://vk.com/", "_blank");
+  window.open("https://vk.com/celinnaya", "_blank");
   vk.classList.add("clicked");
 });
 const ok = document.getElementById("ok");
 ok.addEventListener("click", () => {
-  window.open("https://ok.ru/", "_blank");
+  window.open("https://ok.ru/group/70000003316302", "_blank");
   ok.classList.add("clicked");
 });
 
