@@ -85,19 +85,19 @@ article {
   transition: 1s;
 }
 
-#rest1:checked ~ .mainPhoto {
+#Conf1:checked ~ .mainPhoto {
   margin-left: 0;
 }
-#rest1:checked ~ .sliderManual #labelRest1,
-#rest2:checked ~ .sliderManual #labelRest2,
-#rest3:checked ~ .sliderManual #labelRest3 {
+#Conf1:checked ~ .sliderManual #labelRest1,
+#Conf2:checked ~ .sliderManual #labelRest2,
+#Conf3:checked ~ .sliderManual #labelRest3 {
   background: var(--border);
 }
-#rest2:checked ~ .mainPhoto {
+#Conf2:checked ~ .mainPhoto {
   margin-left: calc((var(--photo) * -1));
 }
 
-#rest3:checked ~ .mainPhoto {
+#Conf3:checked ~ .mainPhoto {
   margin-left: calc((var(--photo) * -2));
 }
 
@@ -320,4 +320,43 @@ mark {
 }
 .intro {
   text-align: center;
+}
+
+/*css for manual navigation*/
+.sliderManual {
+  position: absolute;
+  margin-top: calc(var(--photoH) * 0.85);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.manualButton {
+  border: 2px solid black;
+
+  padding: 0.4rem;
+  border-radius: 1rem;
+
+  cursor: pointer;
+  transition: 1s;
+}
+
+#Conf1:checked ~ .mainPhoto {
+  margin-left: 0;
+}
+#Conf1:checked ~ .sliderManual #labelRest1,
+#Conf2:checked ~ .sliderManual #labelRest2,
+#Conf3:checked ~ .sliderManual #labelRest3 {
+  background: var(--border);
+}
+#Conf2:checked ~ .mainPhoto {
+  margin-left: calc((var(--photo) * -1));
+}
+
+#Conf3:checked ~ .mainPhoto {
+  margin-left: calc((var(--photo) * -2));
+}
+
+.manualButton:hover {
+  background: var(--highlight);
 }

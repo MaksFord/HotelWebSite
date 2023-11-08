@@ -260,14 +260,10 @@ article {
   margin-left: calc((var(--photo) * -3));
 }
 
-#Standart5:checked ~ .mainPhotoStandart {
-  margin-right: calc((var(--photo) * -4));
-}
 #Standart1:checked ~ .sliderManual #labelStandart1,
 #Standart2:checked ~ .sliderManual #labelStandart2,
 #Standart3:checked ~ .sliderManual #labelStandart3,
-#Standart4:checked ~ .sliderManual #labelStandart4,
-#Standart5:checked ~ .sliderManual #labelStandart5 {
+#Standart4:checked ~ .sliderManual #labelStandart4 {
   background: var(--border);
 }
 
@@ -287,14 +283,10 @@ article {
   margin-left: calc((var(--photo) * -3));
 }
 
-#Econom5:checked ~ .mainPhotoEconom {
-  margin-right: calc((var(--photo) * -4));
-}
 #Econom1:checked ~ .sliderManual #labelEconom1,
 #Econom2:checked ~ .sliderManual #labelEconom2,
 #Econom3:checked ~ .sliderManual #labelEconom3,
-#Econom4:checked ~ .sliderManual #labelEconom4,
-#Econom5:checked ~ .sliderManual #labelEconom5 {
+#Econom4:checked ~ .sliderManual #labelEconom4 {
   background: var(--border);
 }
 

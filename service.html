@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="Styles.css" />
     <link rel="stylesheet" href="service.css" />
     <link rel="stylesheet" href="colorThemes.css" />
-    <script src="script.js" defer></script>
+    <script src="scriptFood.js" defer></script>
     <title>Hotel_Celinnaya_services</title>
   </head>
   <body>
@@ -134,9 +134,27 @@
       <h3 lang="kz">Конференц-залы</h3>
       <article class="roomArticle" id="conferenceArticle">
         <div class="roomPhotos">
-          <picture class="roomPhoto">
+          <div class="roomPhotosSlides">
+          <input type="radio" name="radioButtonRest" id="Conf1" />
+            <input type="radio" name="radioButtonRest" id="Conf2" />
+            <input type="radio" name="radioButtonRest" id="Conf3" />  
+          <picture class="roomPhoto mainPhoto">
             <img src="Service/ConferenceRoom1.jpg" alt="Conference Room Photo 1" />
           </picture>
+          <picture class="roomPhoto">
+            <img src="Service/ConferenceRoom2.jpg" alt="Conference Room Photo 2" />
+          </picture>
+          <picture class="roomPhoto">
+            <img src="Service/ConferenceRoom3.jpg" alt="Conference Room Photo 3" />
+          </picture>
+          <div class="sliderManual unfading">
+            <label for="Conf1" id="labelConf1" class="manualButton"></label>
+            <label for="Conf2" id="labelConf2" class="manualButton"></label>
+            <label for="Conf3" id="labelConf3" class="manualButton"></label>
+            </div>
+          </div>
+          <figure class="leftScroll unfading" id="restLeft"><figure class="arrowLeft"></figure></figure>
+            <figure class="rightScroll unfading" id="restRight"><figure class="arrowRight"></figure></figure>
         </div>
         <div class="roomDescription">
           <p lang="ru" class="infoDescription">
@@ -162,7 +180,7 @@
               The cost of the hall is 4500 kzt/hour;<br />
               The cost of the hall with a projector is 5500 kzt/hour;<br /><br />
   
-              <mark>Часы работы:</mark> круглосуточно<br /><br />
+              <mark>Opening hours:</mark> 24 hours<br /><br />
               <mark>Contacts:</mark></p>
 
               <p lang="kz" class="infoDescription">
@@ -197,14 +215,14 @@
 
           <p lang="ru" class="infoDescription">
             Прачечная<br /><br />
-            <mark>Часы работы:</mark> Ежедневно с 9-00 до 18-00<br /><br />
+            <mark>Часы работы:</mark> ежедневно с 9-00 до 18-00<br /><br />
             <mark>Контакты:</mark></p>
 
             <p lang="en" class="infoDescription">
 
               Laundry<br /><br />
-              <mark>Opening hours:</mark> Ежедневно с 9-00 до 18-00<br /><br />
-              <mark>Контакты:</mark></p>
+              <mark>Opening hours:</mark> every day from 9-00 to 18-00<br /><br />
+              <mark>Contacts:</mark></p>
 
 
               <p lang="kz" class="infoDescription">
@@ -232,12 +250,12 @@
         <div class="roomDescription">
           <p lang="ru" class="infoDescription">
             Салон красоты<br /><br />
-            <mark>Часы работы:</mark> Ежедневно с 10-00 до 20-00<br /><br />
+            <mark>Часы работы:</mark> ежедневно с 10-00 до 20-00<br /><br />
             <mark>Контакты:</mark></p>
 
             <p lang="en" class="infoDescription">
               Beauty salon<br /><br />
-              <mark>Opening hours:</mark> Every day from 10:00 to 20:00<br /><br />
+              <mark>Opening hours:</mark> every day from 10:00 to 20:00<br /><br />
               <mark>Contacts:</mark></p>
 
               <p lang="kz" class="infoDescription">

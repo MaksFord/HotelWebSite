@@ -5,7 +5,9 @@ $name = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
 $surname = $_POST['secondname'];
 $surname = htmlspecialchars($surname, ENT_QUOTES, 'UTF-8');
 $email = $_POST['email'];
+$email = htmlspecialchars($email, ENT_QUOTES, 'UTF-8');
 $phoneNumber = $_POST['tele'];
+$phoneNumber = htmlspecialchars($phoneNumber, ENT_QUOTES, 'UTF-8');
 $dateArrival = $_POST['dateArrival'];
 if (isset($_POST['halfStay'])) {
   // Checkbox is checked
@@ -20,6 +22,7 @@ if (isset($_POST['halfStay'])) {
 
 $roomType = $_POST['roomType'];
 $message = $_POST['userMessage'];
+$message = htmlspecialchars($message, ENT_QUOTES, 'UTF-8');
 
 // Set the recipient email address
 $recipient = 'anittahoar440@gmail.com';
